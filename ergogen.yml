@@ -53,11 +53,19 @@ outlines:
       where: true
       bound: true
       size: [px, py]
+    - what: rectangle
+      where: thumb_right
+      bound: true
+      size: [px,py*1.5]
   keys:
     - what: rectangle
       where: true
       bound: false
       size: [kx-0.5,ky-0.5]
+    - what: rectangle
+      where: thumb_right
+      bound: false
+      size: [kx-0.5,ky*1.5-0.5]
   board:
     - what: polygon
       operation: stack
@@ -75,9 +83,9 @@ outlines:
         - ref: matrix_inner_home
           shift: [0.5px,0.5py]
         - ref: thumb_right
-          shift: [0.5px,0.5py]
+          shift: [0.5px,0.75py]
         - ref: thumb_right
-          shift: [0.5px,-0.5py]
+          shift: [0.5px,-0.75py]
         - ref: thumb_left
           shift: [-0.5px,-0.5py]
         - ref: matrix_pinky_bottom
