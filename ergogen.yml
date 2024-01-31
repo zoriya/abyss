@@ -1,8 +1,8 @@
 units:
   kx: cx
   ky: cy
-  px: kx + 2
-  py: ky + 2
+  px: kx + 4
+  py: ky + 4
 points:
   zones:
     matrix:
@@ -39,11 +39,11 @@ points:
       columns:
         left:
         home:
-          key.spread: px
+          key.spread: kx+2
           key.splay: -15
           key.origin: [-0.5kx, -0.5ky]
         right:
-          key.spread: px
+          key.spread: kx+2
           key.splay: -15
           key.origin: [-0.5kx, -0.5ky]
           key.height: 1.5kx
