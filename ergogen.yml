@@ -47,3 +47,43 @@ points:
           key.splay: -15
           key.origin: [-0.5kx, -0.5ky]
           key.height: 1.5kx
+outlines:
+  raw:
+    - what: rectangle
+      where: true
+      bound: true
+      size: [px, py]
+  keys:
+    - what: rectangle
+      where: true
+      bound: false
+      size: [kx-0.5,ky-0.5]
+  board:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_pinky_home
+          shift: [-0.5px,0.5py]
+        - ref: matrix_ring_top
+          shift: [-0.5px,0.5py]
+        - ref: matrix_middle_top
+          shift: [-0.5px,0.5py]
+        - ref: matrix_middle_top
+          shift: [0.5px,0.5py]
+        - ref: matrix_index_top
+          shift: [0.5px,0.5py]
+        - ref: matrix_inner_home
+          shift: [0.5px,0.5py]
+        - ref: thumb_right
+          shift: [0.5px,0.5py]
+        - ref: thumb_right
+          shift: [0.5px,-0.5py]
+        - ref: thumb_left
+          shift: [-0.5px,-0.5py]
+        - ref: matrix_pinky_bottom
+          shift: [-0.5px,-0.5py]
+      fillet: 2
+  combo:
+    - name: board
+    - operation: subtract
+      name: keys
