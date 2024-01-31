@@ -1,0 +1,49 @@
+units:
+  kx: cx
+  ky: cy
+  px: kx + 2
+  py: ky + 2
+points:
+  zones:
+    matrix:
+      key:
+        padding: 1ky
+        spread: 1kx
+      columns:
+        pinky:
+          rows:
+            top:
+              skip: true
+        ring:
+          key.stagger: ky/2
+        middle:
+          key.stagger: ky/4
+        index:
+          key.stagger: -ky/2
+        inner:
+          key.stagger: ky/2
+          rows:
+            top:
+              skip: true
+      rows:
+        bottom:
+        home:
+        top:
+    thumb:
+      key:
+        padding: 1ky
+        spread: 1kx
+      anchor:
+        ref: matrix_index_bottom
+        shift: [kx/2, -ky * 1.5]
+      columns:
+        left:
+        home:
+          key.spread: px
+          key.splay: -15
+          key.origin: [-0.5kx, -0.5ky]
+        right:
+          key.spread: px
+          key.splay: -15
+          key.origin: [-0.5kx, -0.5ky]
+          key.height: 1.5kx
