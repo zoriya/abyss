@@ -1,11 +1,14 @@
 units:
   kx: cx
   ky: cy
-  px: kx + 4
-  py: ky + 4
+  px: 4
+  py: 4
 points:
   zones:
     matrix:
+      # Fix placement on KiCAD sheet.
+      anchor:
+        shift: [100, -100]
       key:
         padding: 1ky
         spread: 1kx
@@ -52,46 +55,75 @@ outlines:
     - what: rectangle
       where: true
       bound: true
-      size: [px, py]
+      size: [kx + px, ky + py]
     - what: rectangle
       where: thumb_right
       bound: true
-      size: [px,py*1.5]
+      size: [kx + px,1.5ky + py]
   keys:
     - what: rectangle
       where: true
       bound: false
-      size: [kx-0.5,ky-0.5]
+      size: [kx - 0.5, ky - 0.5]
     - what: rectangle
       where: thumb_right
       bound: false
-      size: [kx-0.5,ky*1.5-0.5]
+      size: [kx - 0.5, 1.5ky - 0.5]
   board:
     - what: polygon
       operation: stack
       points:
-        - ref: matrix_pinky_home
-          shift: [-0.5px,0.5py]
-        - ref: matrix_ring_top
-          shift: [-0.5px,0.5py]
         - ref: matrix_middle_top
-          shift: [-0.5px,0.5py]
+          shift: [-2.5kx - px, 0.5ky + py]
         - ref: matrix_middle_top
-          shift: [0.5px,0.5py]
-        - ref: matrix_index_top
-          shift: [0.5px,0.5py]
-        - ref: matrix_inner_home
-          shift: [0.5px,0.5py]
+          shift: [0.5kx + px, 0.5ky + py]
+        - ref: matrix_middle_top
+          shift: [4kx + px, 0.5ky + py]
+        - ref: matrix_middle_top
+          shift: [4kx + px, -2.75ky + py]
         - ref: thumb_right
-          shift: [0.5px,0.75py]
+          shift: [0.5kx + px, 0.75ky + py]
         - ref: thumb_right
-          shift: [0.5px,-0.75py]
+          shift: [0.5kx + px, -0.75ky - py]
         - ref: thumb_left
-          shift: [-0.5px,-0.5py]
+          shift: [-0.5kx - px, -0.5ky - py]
         - ref: matrix_pinky_bottom
-          shift: [-0.5px,-0.5py]
-      fillet: 2
+          shift: [2.5kx, -0.5ky - py]
+        - ref: matrix_pinky_bottom
+          shift: [-0.5kx - px, -0.5ky - py]
+      fillet: 4
   combo:
     - name: board
     - operation: subtract
       name: keys
+pcbs:
+  abyss:
+    outlines:
+      main:
+        outline: board
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: true
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
+      promicro:
+        what: promicro
+        params:
+          orientation: "down"
+        where:
+          ref: matrix_middle_top
+          shift: [3kx + 2px, -1.25ky]
+          rotate: -90
