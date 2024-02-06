@@ -364,6 +364,130 @@
       {
         "netclass": "Default",
         "pattern": "P9"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_24"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_23"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_22"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_21"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_20"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_19"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_18"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_17"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_8"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_16"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_9"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_15"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_10"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_14"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_11"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_13"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MCU1_12"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "MOSI"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "SCK"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "CS"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "DISP1_1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "DISP1_2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "DISP1_4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "DISP1_5"
       }
     ]
   },

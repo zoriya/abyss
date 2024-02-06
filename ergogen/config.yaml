@@ -130,12 +130,11 @@ pcbs:
         where:
           ref: matrix_middle_top
           shift: [3kx + 2px, -0.25ky]
-          rotate: -90
       oled:
         what: infused-kim/nice_view
         params:
           reverse: true
+          jumpers_at_bottom: true
         where:
           ref: matrix_middle_top
-          shift: [3kx + 2px, -3.25ky]
-          rotate: -90
+          shift: [3kx + 2px, -0.5ky]
