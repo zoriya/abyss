@@ -123,6 +123,7 @@ pcbs:
           to: "{{row_net}}"
         adjust:
           shift: [0, -5]
+
       promicro:
         what: infused-kim/nice_nano_pretty
         params:
@@ -138,3 +139,24 @@ pcbs:
         where:
           ref: matrix_middle_top
           shift: [3kx + 2px, -0.5ky]
+
+      reset_switch:
+        what: infused-kim/switch_reset
+        params:
+          reverse: true
+          from: GND
+          to: RST
+        where:
+          ref: matrix_middle_top
+          shift: [3kx + 2px, -2.2ky]
+          rotate: -90
+      power_switch:
+        what: infused-kim/switch_power
+        params:
+          reverse: true
+          from: BAT_P
+          to: RAW
+        where:
+          ref: matrix_middle_top
+          shift: [3kx + 2px, -2.7ky]
+          rotate: -90

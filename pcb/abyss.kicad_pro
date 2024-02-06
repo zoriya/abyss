@@ -488,6 +488,10 @@
       {
         "netclass": "Default",
         "pattern": "DISP1_5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "BAT_P"
       }
     ]
   },
