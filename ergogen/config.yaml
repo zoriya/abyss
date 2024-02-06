@@ -148,8 +148,7 @@ pcbs:
           to: RST
         where:
           ref: matrix_middle_top
-          shift: [3kx + 2px, -2.2ky]
-          rotate: -90
+          shift: [3.5kx + 2px, -2.2ky]
       power_switch:
         what: infused-kim/switch_power
         params:
@@ -158,5 +157,4 @@ pcbs:
           to: RAW
         where:
           ref: matrix_middle_top
-          shift: [3kx + 2px, -2.7ky]
-          rotate: -90
+          shift: [3.5kx + 2px, -2.7ky]

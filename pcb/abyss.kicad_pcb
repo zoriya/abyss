@@ -3533,10 +3533,10 @@
     
 
         (module sw_reset_side (layer F.Cu) (tedit 64473C6F)
-          (at 198 90.65 -90)
+          (at 207 90.65 0)
           (attr smd)
 
-          (fp_text reference "SW1" (at 0 3.5 -90) (layer F.SilkS) hide
+          (fp_text reference "SW1" (at 0 3.5 0) (layer F.SilkS) hide
             (effects (font (size 1 1) (thickness 0.15)))
           )
       
@@ -3558,11 +3558,11 @@
           (fp_line (start -1.45 1.75) (end -1.45 -1.75) (layer F.Fab) (width 0.1))
           (fp_line (start -1.45 -1.75) (end 1.45 -1.75) (layer F.Fab) (width 0.1))
 
-          (pad 1 smd rect (at -0.72 -1.8 0) (size 1.4 1.05) (layers F.Cu F.Paste F.Mask) (net 18 "GND"))
+          (pad 1 smd rect (at -0.72 -1.8 90) (size 1.4 1.05) (layers F.Cu F.Paste F.Mask) (net 18 "GND"))
 
-          (pad 1 smd rect (at -0.72 1.8 0) (size 1.4 1.05) (layers F.Cu F.Paste F.Mask) (net 18 "GND"))
-          (pad 2 smd rect (at 0.72 -1.8 0) (size 1.4 1.05) (layers F.Cu F.Paste F.Mask) (net 19 "RST"))
-          (pad 2 smd rect (at 0.72 1.8 0) (size 1.4 1.05) (layers F.Cu F.Paste F.Mask) (net 19 "RST"))
+          (pad 1 smd rect (at -0.72 1.8 90) (size 1.4 1.05) (layers F.Cu F.Paste F.Mask) (net 18 "GND"))
+          (pad 2 smd rect (at 0.72 -1.8 90) (size 1.4 1.05) (layers F.Cu F.Paste F.Mask) (net 19 "RST"))
+          (pad 2 smd rect (at 0.72 1.8 90) (size 1.4 1.05) (layers F.Cu F.Paste F.Mask) (net 19 "RST"))
       
       (fp_line (start -1.45 1.75) (end 1.45 1.75) (layer B.Fab) (width 0.1))
       (fp_line (start 1.45 1.75) (end 1.45 -1.75) (layer B.Fab) (width 0.1))
@@ -3581,11 +3581,11 @@
       (fp_line (start 2.1 -0.85) (end 2.1 0.85) (layer B.Fab) (width 0.1))
       (fp_line (start 1.7 1.1) (end 2.35 1.1) (layer B.CrtYd) (width 0.05))
       (fp_line (start -1.7 2.75) (end 1.7 2.75) (layer B.CrtYd) (width 0.05))
-      (pad 1 smd rect (at -0.72 -1.8 180) (size 1.4 1.05) (layers B.Cu B.Paste B.Mask) (net 18 "GND"))
-      (pad 2 smd rect (at 0.72 1.8 180) (size 1.4 1.05) (layers B.Cu B.Paste B.Mask) (net 19 "RST"))
-      (pad 2 smd rect (at 0.72 -1.8 180) (size 1.4 1.05) (layers B.Cu B.Paste B.Mask) (net 19 "RST"))
-      (pad 1 smd rect (at -0.72 1.8 180) (size 1.4 1.05) (layers B.Cu B.Paste B.Mask) (net 18 "GND"))
-      (fp_text user SW1 (at 0 3.5 -90) (layer B.SilkS) hide
+      (pad 1 smd rect (at -0.72 -1.8 270) (size 1.4 1.05) (layers B.Cu B.Paste B.Mask) (net 18 "GND"))
+      (pad 2 smd rect (at 0.72 1.8 270) (size 1.4 1.05) (layers B.Cu B.Paste B.Mask) (net 19 "RST"))
+      (pad 2 smd rect (at 0.72 -1.8 270) (size 1.4 1.05) (layers B.Cu B.Paste B.Mask) (net 19 "RST"))
+      (pad 1 smd rect (at -0.72 1.8 270) (size 1.4 1.05) (layers B.Cu B.Paste B.Mask) (net 18 "GND"))
+      (fp_text user SW1 (at 0 3.5 0) (layer B.SilkS) hide
         (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
       )
       
@@ -3593,11 +3593,11 @@
       
 
         (module power_switch (layer F.Cu) (tedit 644556E6)
-          (at 198 99.15 -90)
+          (at 207 99.15 0)
           (attr smd)
 
       
-          (fp_text reference "SW2" (at -3.6 0 -180) (layer F.SilkS) hide
+          (fp_text reference "SW2" (at -3.6 0 -90) (layer F.SilkS) hide
             (effects (font (size 1 1) (thickness 0.15)))
           )
 
@@ -3625,17 +3625,17 @@
           (fp_line (start 2.645 1.4) (end 2.845 1.2) (layer F.Fab) (width 0.1))
           (fp_line (start 1.345 1.4) (end 2.645 1.4) (layer F.Fab) (width 0.1))
 
-          (pad "" smd rect (at 1.125 -3.65 0) (size 1 0.8) (layers F.Cu F.Paste F.Mask))
-          (pad "" smd rect (at -1.085 -3.65 0) (size 1 0.8) (layers F.Cu F.Paste F.Mask))
-          (pad "" smd rect (at -1.085 3.65 0) (size 1 0.8) (layers F.Cu F.Paste F.Mask))
-          (pad 1 smd rect (at -1.735 2.25 0) (size 0.7 1.5) (layers F.Cu F.Paste F.Mask))
-          (pad 2 smd rect (at -1.735 -0.75 0) (size 0.7 1.5) (layers F.Cu F.Paste F.Mask) (net 70 "BAT_P"))
-          (pad 3 smd rect (at -1.735 -2.25 0) (size 0.7 1.5) (layers F.Cu F.Paste F.Mask) (net 17 "RAW"))
-          (pad "" smd rect (at 1.125 3.65 0) (size 1 0.8) (layers F.Cu F.Paste F.Mask))
+          (pad "" smd rect (at 1.125 -3.65 90) (size 1 0.8) (layers F.Cu F.Paste F.Mask))
+          (pad "" smd rect (at -1.085 -3.65 90) (size 1 0.8) (layers F.Cu F.Paste F.Mask))
+          (pad "" smd rect (at -1.085 3.65 90) (size 1 0.8) (layers F.Cu F.Paste F.Mask))
+          (pad 1 smd rect (at -1.735 2.25 90) (size 0.7 1.5) (layers F.Cu F.Paste F.Mask))
+          (pad 2 smd rect (at -1.735 -0.75 90) (size 0.7 1.5) (layers F.Cu F.Paste F.Mask) (net 70 "BAT_P"))
+          (pad 3 smd rect (at -1.735 -2.25 90) (size 0.7 1.5) (layers F.Cu F.Paste F.Mask) (net 17 "RAW"))
+          (pad "" smd rect (at 1.125 3.65 90) (size 1 0.8) (layers F.Cu F.Paste F.Mask))
 
       
         
-        (fp_text user "SW2" (at -3.5 0 0) (layer B.SilkS) hide
+        (fp_text user "SW2" (at -3.5 0 90) (layer B.SilkS) hide
         (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
         )
         (fp_line (start 2.595 -0.1) (end 1.295 -0.1) (layer B.Fab) (width 0.1))
@@ -3661,16 +3661,16 @@
         (fp_line (start -2.755 -4.4) (end -2.755 4.4) (layer B.CrtYd) (width 0.05))
         (fp_line (start 3.095 1.65) (end 3.095 -1.65) (layer B.CrtYd) (width 0.05))
         (fp_line (start 1.795 1.65) (end 3.095 1.65) (layer B.CrtYd) (width 0.05))
-        (pad "" smd rect (at -1.085 -3.65 180) (size 1 0.8) (layers B.Cu B.Paste B.Mask))
-        (pad "" smd rect (at 1.125 -3.65 180) (size 1 0.8) (layers B.Cu B.Paste B.Mask))
-        (pad 4 smd rect (at -1.735 2.25 180) (size 0.7 1.5) (layers B.Cu B.Paste B.Mask))
-        (pad "" smd rect (at -1.085 3.65 180) (size 1 0.8) (layers B.Cu B.Paste B.Mask))
-        (pad 5 smd rect (at -1.735 0.75 180) (size 0.7 1.5) (layers B.Cu B.Paste B.Mask) (net 70 "BAT_P"))
-        (pad 6 smd rect (at -1.735 -2.25 180) (size 0.7 1.5) (layers B.Cu B.Paste B.Mask) (net 17 "RAW"))
-        (pad "" smd rect (at 1.125 3.65 180) (size 1 0.8) (layers B.Cu B.Paste B.Mask))
+        (pad "" smd rect (at -1.085 -3.65 270) (size 1 0.8) (layers B.Cu B.Paste B.Mask))
+        (pad "" smd rect (at 1.125 -3.65 270) (size 1 0.8) (layers B.Cu B.Paste B.Mask))
+        (pad 4 smd rect (at -1.735 2.25 270) (size 0.7 1.5) (layers B.Cu B.Paste B.Mask))
+        (pad "" smd rect (at -1.085 3.65 270) (size 1 0.8) (layers B.Cu B.Paste B.Mask))
+        (pad 5 smd rect (at -1.735 0.75 270) (size 0.7 1.5) (layers B.Cu B.Paste B.Mask) (net 70 "BAT_P"))
+        (pad 6 smd rect (at -1.735 -2.25 270) (size 0.7 1.5) (layers B.Cu B.Paste B.Mask) (net 17 "RAW"))
+        (pad "" smd rect (at 1.125 3.65 270) (size 1 0.8) (layers B.Cu B.Paste B.Mask))
         
-          (pad "" np_thru_hole circle (at 0.025 -1.5 0) (size 0.9 0.9) (drill 0.9) (layers *.Cu *.Mask))
-          (pad "" np_thru_hole circle (at 0.025 1.5 0) (size 0.9 0.9) (drill 0.9) (layers *.Cu *.Mask))
+          (pad "" np_thru_hole circle (at 0.025 -1.5 90) (size 0.9 0.9) (drill 0.9) (layers *.Cu *.Mask))
+          (pad "" np_thru_hole circle (at 0.025 1.5 90) (size 0.9 0.9) (drill 0.9) (layers *.Cu *.Mask))
         )
         
             (gr_line (start 87 108.5) (end 87 44.75) (angle 90) (layer Edge.Cuts) (width 0.15))
