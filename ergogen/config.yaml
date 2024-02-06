@@ -1,3 +1,7 @@
+meta:
+  engine: 4.0.5
+  author: zoriya
+  name: abyss
 units:
   kx: cx
   ky: cy
@@ -120,10 +124,18 @@ pcbs:
         adjust:
           shift: [0, -5]
       promicro:
-        what: promicro
+        what: infused-kim/nice_nano_pretty
         params:
-          orientation: "down"
+          traces: true
         where:
           ref: matrix_middle_top
-          shift: [3kx + 2px, -1.25ky]
+          shift: [3kx + 2px, -0.25ky]
+          rotate: -90
+      oled:
+        what: infused-kim/nice_view
+        params:
+          reverse: true
+        where:
+          ref: matrix_middle_top
+          shift: [3kx + 2px, -3.25ky]
           rotate: -90
