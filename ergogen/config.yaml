@@ -18,24 +18,32 @@ points:
         spread: 1kx
       columns:
         pinky:
+          key.column_net: C0
           rows:
             top:
               skip: true
         ring:
+          key.column_net: C1
           key.stagger: ky/2
         middle:
+          key.column_net: C2
           key.stagger: ky/4
         index:
+          key.column_net: C3
           key.stagger: -ky/2
         inner:
+          key.column_net: C4
           key.stagger: ky/2
           rows:
             top:
               skip: true
       rows:
         bottom:
+          row_net: R0
         home:
+          row_net: R1
         top:
+          row_net: R2
     thumb:
       key:
         padding: 1ky
@@ -45,15 +53,21 @@ points:
         shift: [kx/2, -ky * 1.5]
       columns:
         left:
+          key.column_net: C3
         home:
+          key.column_net: C4
           key.spread: kx+2
           key.splay: -15
           key.origin: [-0.5kx, -0.5ky]
         right:
+          key.column_net: C5
           key.spread: kx+2
           key.splay: -15
           key.origin: [-0.5kx, -0.5ky]
           key.height: 1.5kx
+      rows:
+        cluster:
+          row_net: R4
 outlines:
   raw:
     - what: rectangle
@@ -61,7 +75,7 @@ outlines:
       bound: true
       size: [kx + px, ky + py]
     - what: rectangle
-      where: thumb_right
+      where: thumb_right_cluster
       bound: true
       size: [kx + px,1.5ky + py]
   keys:
@@ -70,7 +84,7 @@ outlines:
       bound: false
       size: [kx - 0.5, ky - 0.5]
     - what: rectangle
-      where: thumb_right
+      where: thumb_right_cluster
       bound: false
       size: [kx - 0.5, 1.5ky - 0.5]
   board:
@@ -85,11 +99,11 @@ outlines:
           shift: [4kx + px, 0.5ky + py]
         - ref: matrix_middle_top
           shift: [4kx + px, -2.75ky + py]
-        - ref: thumb_right
+        - ref: thumb_right_cluster
           shift: [0.5kx + px, 0.75ky + py]
-        - ref: thumb_right
+        - ref: thumb_right_cluster
           shift: [0.5kx + px, -0.75ky - py]
-        - ref: thumb_left
+        - ref: thumb_left_cluster
           shift: [-0.5kx - px, -0.5ky - py]
         - ref: matrix_pinky_bottom
           shift: [2.5kx, -0.5ky - py]
@@ -128,6 +142,35 @@ pcbs:
         what: infused-kim/nice_nano_pretty
         params:
           traces: true
+
+          # all pins in up-down order (first left side then right side)
+          # GND (fake pin)
+          P0: 'DPD'   # Display Data
+          P1: 'DPC'   # Display Clock
+          # GND
+          # GND
+          P2: 'F0'    # Free
+          P3: 'F1'    # Free
+          P4: 'R0'    # Row Top
+          P5: 'R1'    # Row Home
+          P6: 'R2'    # Row Bottom
+          P7: 'R3'    # Row Thumb
+          P8: 'F8'    # Free, but could be Num Row
+          P9: 'DPE'   # Display CS (nice!view only)
+
+          # Left Side
+          # RAW       # Battery Pos
+          # GND       # Ground / Battery Neg
+          # RST       # Reset pin
+          # VCC       # External Power
+          P21: 'C0'   # Column Pinky
+          P20: 'C1'   # Column Ring
+          P19: 'C2'   # Column Middle
+          P18: 'C3'   # Column Index
+          P15: 'C4'   # Column Inner
+          P14: 'C5'   # Free
+          P16: 'F16'  # Free, but could be Encoder 1
+          P10: 'F10'  # Free, but could be Encoder 2
         where:
           ref: matrix_middle_top
           shift: [3kx + 2px, -0.25ky]
@@ -136,6 +179,9 @@ pcbs:
         params:
           reverse: true
           jumpers_at_bottom: true
+          MOSI: DPD
+          SCK: DPC
+          CS: DPE
         where:
           ref: matrix_middle_top
           shift: [3kx + 2px, -0.5ky]
