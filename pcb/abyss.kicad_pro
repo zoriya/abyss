@@ -315,7 +315,7 @@
       },
       {
         "netclass": "Default",
-        "pattern": "R4"
+        "pattern": "R3"
       },
       {
         "netclass": "Default",
@@ -332,10 +332,6 @@
       {
         "netclass": "Default",
         "pattern": "VCC"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "F14"
       },
       {
         "netclass": "Default",
@@ -360,10 +356,6 @@
       {
         "netclass": "Default",
         "pattern": "F1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "R3"
       },
       {
         "netclass": "Default",

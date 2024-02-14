@@ -67,7 +67,7 @@ points:
           key.height: 1.5kx
       rows:
         cluster:
-          row_net: R4
+          row_net: R3
 outlines:
   raw:
     - what: rectangle
@@ -168,7 +168,7 @@ pcbs:
           P19: 'C2'   # Column Middle
           P18: 'C3'   # Column Index
           P15: 'C4'   # Column Inner
-          P14: 'F14'   # Free
+          P14: 'C5'   # Column Thumb
           P16: 'F16'  # Free, but could be Encoder 1
           P10: 'F10'  # Free, but could be Encoder 2
         where:
@@ -204,3 +204,7 @@ pcbs:
         where:
           ref: matrix_middle_top
           shift: [3.5kx + 2px, -2.7ky]
+cases:
+  bottom:
+    - name: board
+      extrude: 3
