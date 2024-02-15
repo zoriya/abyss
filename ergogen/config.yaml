@@ -145,8 +145,8 @@ pcbs:
 
           # all pins in up-down order (first left side then right side)
           # GND (fake pin)
-          P0: 'DPD'   # Display Data
-          P1: 'DPC'   # Display Clock
+          P0: 'DPD'   # Display Data (unused)
+          P1: 'DPC'   # Display Clock (unused)
           # GND
           # GND
           P2: 'F0'    # Free
@@ -156,7 +156,7 @@ pcbs:
           P6: 'R2'    # Row Bottom
           P7: 'R3'    # Row Thumb
           P8: 'F8'    # Free
-          P9: 'DPE'   # Display CS (nice!view only)
+          P9: 'DPE'   # Display CS (nice!view only) (unused)
 
           # Left Side
           # RAW       # Battery Pos
@@ -174,17 +174,6 @@ pcbs:
         where:
           ref: matrix_middle_top
           shift: [3kx + 2px, -0.25ky]
-      oled:
-        what: infused-kim/nice_view
-        params:
-          reverse: true
-          jumpers_at_bottom: true
-          MOSI: DPD
-          SCK: DPC
-          CS: DPE
-        where:
-          ref: matrix_middle_top
-          shift: [3kx + 2px, -0.5ky]
 
       reset_switch:
         what: infused-kim/switch_reset
