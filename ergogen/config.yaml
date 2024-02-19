@@ -112,13 +112,15 @@ outlines:
         - ref: matrix_pinky_bottom
           shift: [-0.5kx - px, -0.5ky - py]
       fillet: 4
+  xl_board:
+    - name: board
+      expand: 5
   combo:
     - name: board
     - operation: subtract
       name: keys
-  walls:
-    - name: board
-      expand: 3
+    - operation: stack
+      name: xl_board
 pcbs:
   abyss:
     outlines:
@@ -213,6 +215,14 @@ pcbs:
           shift: [0, 0.75ky]
           rotate: 90
 cases:
-  bottom:
+  wall:
+    - name: xl_board
+      extrude: 10
+    - name: board
+      extrude: 10
+      operation: subtract
+  case:
     - name: board
       extrude: 3
+    - what: case
+      name: wall
