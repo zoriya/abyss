@@ -463,23 +463,15 @@
       },
       {
         "netclass": "Default",
-        "pattern": "DISP1_1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "DISP1_2"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "DISP1_4"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "DISP1_5"
-      },
-      {
-        "netclass": "Default",
         "pattern": "BAT_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "JST1_1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "JST1_2"
       }
     ]
   },

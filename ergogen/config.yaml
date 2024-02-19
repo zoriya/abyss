@@ -7,6 +7,7 @@ units:
   ky: cy
   px: 4
   py: 4
+  mc_width: 18+2
 points:
   zones:
     matrix:
@@ -50,7 +51,7 @@ points:
         spread: 1kx
       anchor:
         ref: matrix_index_bottom
-        shift: [kx/2, -ky * 1.5]
+        shift: [-kx/2, -ky * 1.5]
       columns:
         left:
           key.column_net: C3
@@ -64,7 +65,8 @@ points:
           key.spread: kx+2
           key.splay: -15
           key.origin: [-0.5kx, -0.5ky]
-          key.height: 1.5kx
+          key.width: 1.5kx
+          key.rotate: 90
       rows:
         cluster:
           row_net: R3
@@ -77,7 +79,7 @@ outlines:
     - what: rectangle
       where: thumb_right_cluster
       bound: true
-      size: [kx + px,1.5ky + py]
+      size: [1.5kx + px, ky + py]
   keys:
     - what: rectangle
       where: true
@@ -86,7 +88,7 @@ outlines:
     - what: rectangle
       where: thumb_right_cluster
       bound: false
-      size: [kx - 0.5, 1.5ky - 0.5]
+      size: [1.5kx - 0.5, ky - 0.5]
   board:
     - what: polygon
       operation: stack
@@ -96,17 +98,17 @@ outlines:
         - ref: matrix_middle_top
           shift: [0.5kx + px, 0.5ky + py]
         - ref: matrix_middle_top
-          shift: [4kx + px, 0.5ky + py]
+          shift: [2.5kx + mc_width, 0.5ky + py]
         - ref: matrix_middle_top
-          shift: [4kx + px, -2.75ky + py]
+          shift: [2.5kx + mc_width, -3.5ky + py]
         - ref: thumb_right_cluster
-          shift: [0.5kx + px, 0.75ky + py]
+          shift: [0.5kx + 2px, -0.5ky - py]
         - ref: thumb_right_cluster
-          shift: [0.5kx + px, -0.75ky - py]
+          shift: [-0.5kx - 2px, -0.5ky - py]
         - ref: thumb_left_cluster
           shift: [-0.5kx - px, -0.5ky - py]
         - ref: matrix_pinky_bottom
-          shift: [2.5kx, -0.5ky - py]
+          shift: [1.5kx, -0.5ky - py]
         - ref: matrix_pinky_bottom
           shift: [-0.5kx - px, -0.5ky - py]
       fillet: 4
@@ -172,8 +174,8 @@ pcbs:
           P16: 'F16'  # Free, but could be Encoder 1
           P10: 'F10'  # Free, but could be Encoder 2
         where:
-          ref: matrix_middle_top
-          shift: [3kx + 2px, -0.25ky]
+          ref: matrix_inner_bottom
+          shift: [1kx+1, 0.5ky]
 
       reset_switch:
         what: infused-kim/switch_reset
@@ -182,8 +184,9 @@ pcbs:
           from: GND
           to: RST
         where:
-          ref: matrix_middle_top
-          shift: [3.5kx + 2px, -2.2ky]
+          ref: matrix_inner_home
+          shift: [-0.25kx, 1ky]
+          rotate: 90
       power_switch:
         what: infused-kim/switch_power
         params:
@@ -191,8 +194,21 @@ pcbs:
           from: BAT_P
           to: RAW
         where:
-          ref: matrix_middle_top
-          shift: [3.5kx + 2px, -2.7ky]
+          ref: matrix_inner_home
+          shift: [0.25kx, 1ky]
+          rotate: 90
+
+      battery_connector:
+        what: ceoloide/battery_connector_jst_ph_2
+        params:
+          BAT_P: BAT_P
+          BAT_N: GND
+          reversible: true
+          include_courtyard: false
+        where:
+          ref: matrix_inner_bottom
+          shift: [0.5kx, -1ky]
+          rotate: -90
 cases:
   bottom:
     - name: board
