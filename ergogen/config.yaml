@@ -40,11 +40,11 @@ points:
               skip: true
       rows:
         bottom:
-          row_net: R0
+          row_net: R2
         home:
           row_net: R1
         top:
-          row_net: R2
+          row_net: R0
     thumb:
       key:
         padding: 1ky
@@ -116,6 +116,9 @@ outlines:
     - name: board
     - operation: subtract
       name: keys
+  walls:
+    - name: board
+      expand: 3
 pcbs:
   abyss:
     outlines:
@@ -185,7 +188,7 @@ pcbs:
           to: RST
         where:
           ref: matrix_inner_home
-          shift: [-0.25kx, 1ky]
+          shift: [-0.25kx, 1.25ky]
           rotate: 90
       power_switch:
         what: infused-kim/switch_power
@@ -195,7 +198,7 @@ pcbs:
           to: RAW
         where:
           ref: matrix_inner_home
-          shift: [0.25kx, 1ky]
+          shift: [0.25kx, 1.25ky]
           rotate: 90
 
       battery_connector:
@@ -206,9 +209,9 @@ pcbs:
           reversible: true
           include_courtyard: false
         where:
-          ref: matrix_inner_bottom
-          shift: [0.5kx, -1ky]
-          rotate: -90
+          ref: matrix_inner_home
+          shift: [0, 0.75ky]
+          rotate: 90
 cases:
   bottom:
     - name: board

@@ -303,7 +303,7 @@
       },
       {
         "netclass": "Default",
-        "pattern": "R0"
+        "pattern": "R2"
       },
       {
         "netclass": "Default",
@@ -311,7 +311,7 @@
       },
       {
         "netclass": "Default",
-        "pattern": "R2"
+        "pattern": "R0"
       },
       {
         "netclass": "Default",
