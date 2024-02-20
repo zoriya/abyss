@@ -3704,10 +3704,10 @@
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
-                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+                (pad "" thru_hole circle (at 0 0 180) (size 4.5 4.5) (drill 2.9) (layers *.Cu *.Mask))
         
-                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
-                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.5 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.5 0) (layer B.CrtYd) (width 0.05))
         
             )
         
@@ -3718,10 +3718,10 @@
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
-                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+                (pad "" thru_hole circle (at 0 0 180) (size 4.5 4.5) (drill 2.9) (layers *.Cu *.Mask))
         
-                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
-                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.5 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.5 0) (layer B.CrtYd) (width 0.05))
         
             )
         
@@ -3732,10 +3732,10 @@
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
-                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+                (pad "" thru_hole circle (at 0 0 180) (size 4.5 4.5) (drill 2.9) (layers *.Cu *.Mask))
         
-                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
-                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.5 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.5 0) (layer B.CrtYd) (width 0.05))
         
             )
         
@@ -3746,10 +3746,10 @@
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
-                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+                (pad "" thru_hole circle (at 0 0 180) (size 4.5 4.5) (drill 2.9) (layers *.Cu *.Mask))
         
-                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
-                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.5 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.5 0) (layer B.CrtYd) (width 0.05))
         
             )
         
@@ -3757,6 +3757,34 @@
             (module mounting_hole (layer F.Cu) (tedit 64B5A986)
                 (at 135 130.75 0)
                 (fp_text reference "H5" (at 0 3) (layer F.SilkS) hide
+                    (effects (font (size 1 1) (thickness 0.15)))
+                )
+        
+                (pad "" thru_hole circle (at 0 0 180) (size 4.5 4.5) (drill 2.9) (layers *.Cu *.Mask))
+        
+                (fp_circle (center 0 0) (end -2.5 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.5 0) (layer B.CrtYd) (width 0.05))
+        
+            )
+        
+
+            (module mounting_hole (layer F.Cu) (tedit 64B5A986)
+                (at 187.72396099999997 148.4395207 60)
+                (fp_text reference "H6" (at 0 3) (layer F.SilkS) hide
+                    (effects (font (size 1 1) (thickness 0.15)))
+                )
+        
+                (pad "" thru_hole circle (at 0 0 180) (size 4.5 4.5) (drill 2.9) (layers *.Cu *.Mask))
+        
+                (fp_circle (center 0 0) (end -2.5 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.5 0) (layer B.CrtYd) (width 0.05))
+        
+            )
+        
+
+            (module mounting_hole (layer F.Cu) (tedit 64B5A986)
+                (at 109 83 0)
+                (fp_text reference "H7" (at 0 3) (layer F.SilkS) hide
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
@@ -3769,8 +3797,22 @@
         
 
             (module mounting_hole (layer F.Cu) (tedit 64B5A986)
-                (at 187.72396099999997 148.4395207 60)
-                (fp_text reference "H6" (at 0 3) (layer F.SilkS) hide
+                (at 163 70.25 0)
+                (fp_text reference "H8" (at 0 3) (layer F.SilkS) hide
+                    (effects (font (size 1 1) (thickness 0.15)))
+                )
+        
+                (pad "" thru_hole circle (at 0 0 180) (size 3.8000000000000003 3.8000000000000003) (drill 2.2) (layers *.Cu *.Mask))
+        
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer F.CrtYd) (width 0.05))
+                (fp_circle (center 0 0) (end -2.1500000000000004 0) (layer B.CrtYd) (width 0.05))
+        
+            )
+        
+
+            (module mounting_hole (layer F.Cu) (tedit 64B5A986)
+                (at 179.90790900000002 121.6622384 -15)
+                (fp_text reference "H9" (at 0 3) (layer F.SilkS) hide
                     (effects (font (size 1 1) (thickness 0.15)))
                 )
         
