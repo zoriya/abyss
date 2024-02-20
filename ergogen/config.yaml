@@ -79,11 +79,11 @@ outlines:
   raw:
     - what: rectangle
       where: true
-      bound: true
+      bound: false
       size: [kx + px, ky + py]
     - what: rectangle
       where: thumb_right_cluster
-      bound: true
+      bound: false
       size: [1.5kx + px, ky + py]
   keys:
     - what: rectangle
@@ -131,6 +131,8 @@ outlines:
       name: keys
     - operation: stack
       name: xl_board
+    - operation: stack
+      name: raw
 pcbs:
   abyss:
     outlines:
@@ -268,8 +270,14 @@ cases:
     - name: board
       extrude: 10
       operation: subtract
-  case:
+  bottom:
     - name: board
       extrude: 3
     - what: case
       name: wall
+  case:
+    - name: board
+      extrude: 3
+    - name: raw
+      extrude: 10
+      operation: subtract
