@@ -224,6 +224,37 @@ pcbs:
           ref: matrix_inner_home
           shift: [0, 0.75ky]
           rotate: 90
+
+      mounts_top_left:
+        what: infused-kim/mounting_hole
+        where:
+          ref: matrix_middle_top
+          shift: [-2.5kx, 0.5ky]
+      mounts_top_right:
+        what: infused-kim/mounting_hole
+        where:
+          ref: matrix_middle_top
+          shift: [2.5kx + mc_width - px, 0.5ky]
+      mounts_middle_right:
+        what: infused-kim/mounting_hole
+        where:
+          ref: matrix_middle_bottom
+          shift: [2.5kx + mc_width - px, -1.25ky]
+      mounts_bottom_left:
+        what: infused-kim/mounting_hole
+        where:
+          ref: matrix_middle_bottom
+          shift: [-2.5kx, -1.25ky]
+      mounts_thumb_left:
+        what: infused-kim/mounting_hole
+        where:
+          ref: thumb_left_cluster
+          shift: [-0.5kx - 0.25px, -0.5ky - 0.25py]
+      mounts_thumb_right:
+        what: infused-kim/mounting_hole
+        where:
+          ref: thumb_right_cluster
+          shift: [-0.5kx - 1.25px, -0.5ky]
 cases:
   plate:
     - name: board
