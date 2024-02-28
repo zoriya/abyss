@@ -4,5 +4,6 @@ pkgs.mkShell {
     kicad
     nodejs
     freecad
+    blender
   ];
 }
