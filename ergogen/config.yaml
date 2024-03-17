@@ -94,11 +94,6 @@ outlines:
       where: thumb_right_cluster
       bound: false
       size: [1.5kx - 0.5, ky - 0.5]
-  plate:
-    - what: rectangle
-      where: true
-      bound: false
-      size: [kcox, kcoy]
   board:
     - what: polygon
       operation: stack
@@ -125,6 +120,15 @@ outlines:
   xl_board:
     - name: board
       expand: 5
+  plate_keys:
+    - what: rectangle
+      where: true
+      bound: false
+      size: [kcox, kcoy]
+  plate:
+    - name: board
+    - operation: substract
+      name: plate_keys
   combo:
     - name: board
     - operation: subtract
@@ -289,7 +293,7 @@ cases:
   plate:
     - name: board
       extrude: plate_thickness
-    - name: plate
+    - name: plate_keys
       extrude: plate_thickness
       operation: subtract
   wall:
