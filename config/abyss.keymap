@@ -11,12 +11,12 @@
 //       |  ,  |  .  |  P  |  Y  |         |  F  |  G  |  C  |  R  |
 // |  A  |  O  |  E  |  U  |  I  |         |  D  |  H  |  T  |  N  |  S  |
 // |  '  |  Q  |  J  |  K  |                     |  M  |  W  |  V  |  L  |
-//                | TAB | SCP | ESC |  | ENT | BCP  | DEL |
+//                | TAB | SCP | ESC |  | RET | BCP  | DEL |
             bindings = <
                 &kp COMMA  &kp DOT    &kp P      &kp Y           &kp F      &kp G      &kp C      &kp R
      &kp A      &kp O      &kp E      &kp U      &kp I           &kp D      &kp H      &kp T      &kp N      &kp S
      &kp SQT    &kp Q      &kp J      &kp K                                 &kp M      &kp W      &kp V      &kp L
-                           &kp TAB    &kp SPACE  &kp ESC         &kp ENT     &kp BCP      &kp DEL
+                           &kp TAB    &kp SPACE  &kp ESC         &kp RET     &kp BSPC     &kp DEL
             >;
         };
     };
