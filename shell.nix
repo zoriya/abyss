@@ -5,5 +5,8 @@ pkgs.mkShell {
     nodejs
     freecad
     blender
+    # python312Packages.west
+    # cmake
+    # ninja
   ];
 }
