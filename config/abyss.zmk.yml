@@ -1,0 +1,11 @@
+file_format: "1"
+id: abyss
+name: abyss
+type: shield
+url: https://github.com/zoriya/abyss
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - abyss_left
+  - abyss_right
