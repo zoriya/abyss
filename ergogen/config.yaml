@@ -127,7 +127,7 @@ outlines:
       size: [kcox, kcoy]
   plate:
     - name: board
-    - operation: substract
+    - operation: subtract
       name: plate_keys
   combo:
     - name: board
@@ -298,10 +298,12 @@ cases:
       operation: subtract
   wall:
     - name: xl_board
-      extrude: 10
+      extrude: 15
     - name: board
-      extrude: 10
+      extrude: 15
       operation: subtract
+  # usb:
+  #   -name 3x9mm 
   bottom:
     - name: board
       extrude: 3
@@ -309,7 +311,10 @@ cases:
       name: wall
   case:
     - name: board
-      extrude: 3
+      extrude: 2
     - name: raw
-      extrude: 10
+      extrude: 2
       operation: subtract
+    - what: case
+      name: wall
+      operation: add
