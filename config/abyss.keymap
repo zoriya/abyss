@@ -101,11 +101,59 @@
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
-
         combo_end {
             // pressing both htn does end
             key-positions = <14 15 16>;
             bindings = <&kp END>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        combo_lbkt {
+            // pressing .e does [
+            key-positions = <1 10>;
+            bindings = <&kp LBKT>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        combo_rbkt {
+            // pressing ct does ]
+            key-positions = <6 15>;
+            bindings = <&kp RBKT>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        combo_lpar {
+            // pressing pu does (
+            key-positions = <2 11>;
+            bindings = <&kp LPAR>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        combo_rpar {
+            // pressing gh does )
+            key-positions = <5 14>;
+            bindings = <&kp RPAR>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        combo_lbkt {
+            // pressing yi does {
+            key-positions = <3 12>;
+            bindings = <&kp LBKT>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        combo_rbkt {
+            // pressing fd does }
+            key-positions = <4 13>;
+            bindings = <&kp RBKT>;
             timeout-ms = <20>;
             require-prior-idle-ms = <150>;
             layers = <0>;
