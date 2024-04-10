@@ -57,6 +57,38 @@
             >;
         };
     };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_semi {
+            // pressing both , and . does ;
+            key-positions = <0 1>;
+            bindings = <&kp SEMI>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+        };
+        combo_x {
+            // pressing both . and p does x
+            key-positions = <1 2>;
+            bindings = <&kp X>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+        };
+        combo_z {
+            // pressing both g and c does z
+            key-positions = <5 6>;
+            bindings = <&kp Z>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+        };
+        combo_b {
+            // pressing both c and r does b
+            key-positions = <6 7>;
+            bindings = <&kp B>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+        };
+    };
 };
 
 // vim: ft=dts
