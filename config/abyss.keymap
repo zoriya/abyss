@@ -158,18 +158,18 @@
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
-        combo_lbkt {
+        combo_lbrc {
             // pressing yi does {
             key-positions = <3 12>;
-            bindings = <&kp LBKT>;
+            bindings = <&kp LBRC>;
             timeout-ms = <20>;
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
-        combo_rbkt {
+        combo_rbrc {
             // pressing fd does }
             key-positions = <4 13>;
-            bindings = <&kp RBKT>;
+            bindings = <&kp RBRC>;
             timeout-ms = <20>;
             require-prior-idle-ms = <150>;
             layers = <0>;
