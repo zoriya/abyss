@@ -66,6 +66,7 @@
             bindings = <&kp SEMI>;
             timeout-ms = <20>;
             require-prior-idle-ms = <150>;
+            layers = <0>;
         };
         combo_x {
             // pressing both . and p does x
@@ -73,6 +74,7 @@
             bindings = <&kp X>;
             timeout-ms = <20>;
             require-prior-idle-ms = <150>;
+            layers = <0>;
         };
         combo_z {
             // pressing both g and c does z
@@ -80,6 +82,7 @@
             bindings = <&kp Z>;
             timeout-ms = <20>;
             require-prior-idle-ms = <150>;
+            layers = <0>;
         };
         combo_b {
             // pressing both c and r does b
@@ -87,6 +90,25 @@
             bindings = <&kp B>;
             timeout-ms = <20>;
             require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        combo_home {
+            // pressing both oeu does home
+            key-positions = <9 10 11>;
+            bindings = <&kp HOME>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        combo_end {
+            // pressing both htn does end
+            key-positions = <14 15 16>;
+            bindings = <&kp END>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
         };
     };
 };
