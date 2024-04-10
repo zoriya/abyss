@@ -1,0 +1,11 @@
+layers: 
+  default: {}
+combos:
+- p: [9, 10, 11]
+  k: HOME
+  draw_separate: true
+  l: [default]
+- p: [14, 15, 16]
+  k: END
+  draw_separate: true
+  l: [default]
