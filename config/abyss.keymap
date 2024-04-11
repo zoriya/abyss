@@ -53,32 +53,52 @@
             bindings = <&kp SPACE>, <&kp RIGHT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        up_bspc: up_dspc_morph {
+        down_bspc: down_dspc_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BSPC>, <&kp UP>;
+            bindings = <&kp BSPC>, <&kp DOWN>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        down_ret: down_ret_morph {
+        up_ret: up_ret_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RET>, <&kp DOWN>;
+            bindings = <&kp RET>, <&kp UP>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         lt_spc: layer_tap_spc {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_SPACE";
+            flavor = "balanced";
             #binding-cells = <2>;
             bindings = <&mo>, <&right_space>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <150>;
+            // all keys on the right hands and thumbs
+            hold-trigger-key-positions = <
+                4 5 6 7
+                13 14 15 16 17
+                22 23 24 25
+                26 27 28 29 30 31
+            >;
+            hold-trigger-on-release;
         };
         lt_bspc: layer_tap_bspc {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_BACKSPACE";
+            flavor = "balanced";
             #binding-cells = <2>;
-            bindings = <&mo>, <&up_bspc>;
-            tapping-term-ms = <150>;
+            bindings = <&mo>, <&down_bspc>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <150>;
+            // all keys on the left hands and thumbs
+            hold-trigger-key-positions = <
+                0 1 2 3
+                8 9 10 11 12
+                18 19 20 21
+                26 27 28 29 30 31
+            >;
+            hold-trigger-on-release;
         };
     };
 
@@ -94,7 +114,7 @@
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯  ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp SQT       &kp Q         &kp J         &kp K                                        &kp M         &kp W         &kp V         &kp L
 //╰───────────────────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────┼─────────────┼─────────────┼───────────────────────────╯
-                                &left_tab     &lt_spc SY 0  &kp ESC          &kp RET      &lt_bspc SY 0  &down_ret
+                                &left_tab     &lt_spc SY 0  &kp ESC          &kp RET      &lt_bspc SY 0  &up_ret
 //                            ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
             >;
         };
