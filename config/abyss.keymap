@@ -40,6 +40,46 @@
             >;
             hold-trigger-on-release;
         };
+
+        left_tab: left_tab_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp LEFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        right_space: right_space_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp RIGHT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        up_bspc: up_dspc_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp UP>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        down_ret: down_ret_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RET>, <&kp DOWN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        lt_spc: layer_tap_bspc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_SPACE";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&right_space>;
+            tapping-term-ms = <150>;
+        };
+        lt_bspc: layer_tap_bspc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_BACKSPACE";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&up_dspc>;
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
@@ -54,7 +94,7 @@
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯  ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp SQT       &kp Q         &kp J         &kp K                                        &kp M         &kp W         &kp V         &kp L
 //╰───────────────────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────┼─────────────┼─────────────┼───────────────────────────╯
-                                &kp TAB       &lt SY SPACE  &kp ESC          &kp RET       &lt SY BSPC   &kp DEL
+                                &left_tab     &lt_spc SY 0  &kp ESC          &kp RET      &lt_bspc SY 0  &down_ret
 //                            ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -64,7 +104,7 @@
 //                  ╭───────────────┬────────────────┬────────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────╮
                       &kp EXCL        &kp AT           &kp HASH         &kp FSLH         &kp MINUS     &kp N7        &kp N8        &kp N9
 //╭─────────────────┼───────────────┼────────────────┼────────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼────────────────╮
-    &hml LALT TILDE   &hml LGUI DLLR  &hml LSFT PRCNT  &hml LCTL CARET  &kp QMARK        &kp PLUS      &hmr LCTL N4  &hmr LSFT N5  &hmr LGUI N6  &hmr LALT EQUAL
+    &hml LALT TILDE   &hml LGUI DLLR  &hml LSFT PRCNT  &hml LCTL CARET  &kp QMARK        &kp EQUAL     &hmr LCTL N4  &hmr LSFT N5  &hmr LGUI N6  &hmr LALT PLUS
 //├─────────────────┼───────────────┼────────────────┼────────────────┼─────────────╯  ╰─────────────┼─────────────┼─────────────┼─────────────┼────────────────┤
     &kp GRAVE         &kp AMPS        &kp STAR         &kp PIPE                                        &kp N1        &kp N2        &kp N3        &kp BSLH
 //╰─────────────────────────────────┼────────────────┼────────────────┼─────────────╮  ╭─────────────┼─────────────┼─────────────┼──────────────────────────────╯
@@ -187,6 +227,15 @@
             // pressing mw does _
             key-positions = <22 23>;
             bindings = <&kp UNDERSCORE>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        combo_esc {
+            // pressing uh does esc
+            key-positions = <11 14>;
+            bindings = <&kp ESC>;
             timeout-ms = <20>;
             require-prior-idle-ms = <150>;
             layers = <0>;
