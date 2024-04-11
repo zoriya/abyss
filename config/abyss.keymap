@@ -66,7 +66,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        lt_spc: layer_tap_bspc {
+        lt_spc: layer_tap_spc {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_SPACE";
             #binding-cells = <2>;
@@ -77,7 +77,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_BACKSPACE";
             #binding-cells = <2>;
-            bindings = <&mo>, <&up_dspc>;
+            bindings = <&mo>, <&up_bspc>;
             tapping-term-ms = <150>;
         };
     };

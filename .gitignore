@@ -10,3 +10,4 @@ zephyr
 zmk
 .west
 build
+.venv
