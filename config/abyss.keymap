@@ -277,6 +277,14 @@
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
+        combo_enter {
+            // pressing te does enter
+            key-positions = <10 15>;
+            bindings = <&kp ENTER>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
     };
 };
 

@@ -13,3 +13,7 @@ combos:
   k: ESC
   draw_separate: true
   l: [default]
+- p: [10, 15]
+  k: ENTER
+  draw_separate: true
+  l: [default]
