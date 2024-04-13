@@ -169,6 +169,15 @@
             layers = <0>;
         };
 
+        combo_z {
+            // pressing both s and l does z
+            key-positions = <17 25>;
+            bindings = <&kp Z>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
         combo_home {
             // pressing both oeu does home
             key-positions = <9 10 11>;
