@@ -467,15 +467,19 @@ path.combo {
 </g>
 <g transform="translate(480, 28)" class="key keypos-5">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">BT</tspan><tspan x="0" dy="1.2em">CLR</tspan>
-</text>
+<text x="0" y="0" class="key tap">MUTE</text>
 </g>
 <g transform="translate(540, 28)" class="key keypos-6">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">VOLUME</tspan><tspan x="0" dy="1.2em">DOWN</tspan>
+</text>
 </g>
 <g transform="translate(600, 28)" class="key keypos-7">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">VOLUME</tspan><tspan x="0" dy="1.2em">UP</tspan>
+</text>
 </g>
 <g transform="translate(30, 112)" class="key keypos-8">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
@@ -540,6 +544,9 @@ path.combo {
 </g>
 <g transform="translate(660, 168)" class="key keypos-25">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">BT</tspan><tspan x="0" dy="1.2em">CLR</tspan>
+</text>
 </g>
 <g transform="translate(180, 196)" class="key trans keypos-26">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key trans"/>
@@ -556,9 +563,9 @@ path.combo {
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(450, 196)" class="key trans keypos-30">
-<rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(450, 196)" class="key keypos-30">
+<rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
+<text x="0" y="0" class="key tap">PP</text>
 </g>
 <g transform="translate(510, 196)" class="key trans keypos-31">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key trans"/>
