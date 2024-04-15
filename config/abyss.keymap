@@ -55,7 +55,7 @@
         left_tab: left_tab_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&none>, <&kp LEFT>;
+            bindings = <&kp ENTER>, <&kp LEFT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         right_space: right_space_morph {
