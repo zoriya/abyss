@@ -55,7 +55,7 @@
         left_tab: left_tab_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp TAB>, <&kp LEFT>;
+            bindings = <&none>, <&kp LEFT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         right_space: right_space_morph {
@@ -131,11 +131,11 @@
         symbols {
             bindings = <
 //                  ╭───────────────┬────────────────┬────────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────╮
-                      &kp EXCL        &kp AT           &kp HASH         &kp FSLH         &kp MINUS     &kp N7        &kp N8        &kp N9
+                      &kp EXCL        &kp AT           &kp HASH         &kp BSLH         &kp QMARK     &kp N7        &kp N8        &kp N9
 //╭─────────────────┼───────────────┼────────────────┼────────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼────────────────╮
-    &hml LALT TILDE   &hml LGUI DLLR  &hml LSFT PRCNT  &hml LCTL CARET  &kp QMARK        &kp EQUAL     &hmr LCTL N4  &hmr LSFT N5  &hmr LGUI N6  &hmr LALT PLUS
+    &hml LALT COLON   &hml LGUI DLLR  &hml LSFT PRCNT  &hml LCTL CARET  &kp FSLH         &kp EQUAL     &hmr LCTL N4  &hmr LSFT N5  &hmr LGUI N6  &hmr LALT PLUS
 //├─────────────────┼───────────────┼────────────────┼────────────────┼─────────────╯  ╰─────────────┼─────────────┼─────────────┼─────────────┼────────────────┤
-    &kp GRAVE         &kp AMPS        &kp STAR         &kp PIPE                                        &kp N1        &kp N2        &kp N3        &kp BSLH
+    &kp GRAVE         &kp AMPS        &kp STAR         &kp PIPE                                        &kp N1        &kp N2        &kp N3        &kp TILDE
 //╰─────────────────────────────────┼────────────────┼────────────────┼─────────────╮  ╭─────────────┼─────────────┼─────────────┼──────────────────────────────╯
                                       &trans           &trans           &trans           &trans        &trans        &kp N0
 //                                  ╰────────────────┴────────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
@@ -179,6 +179,14 @@
             // pressing both c and r does b
             key-positions = <6 7>;
             bindings = <&kp B>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <ALPHA_COMBO_REQUIRE_DELAY>;
+            layers = <0>;
+        };
+        combo_z {
+            // pressing both g and c does z
+            key-positions = <5 6>;
+            bindings = <&kp Z>;
             timeout-ms = <20>;
             require-prior-idle-ms = <ALPHA_COMBO_REQUIRE_DELAY>;
             layers = <0>;
