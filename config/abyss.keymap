@@ -8,6 +8,11 @@
 #define VOLDWN C_VOLUME_DOWN
 #define VOLUP C_VOLUME_UP
 
+#define TAPPING_TERM 280
+#define QUICK_TAP 150
+#define ALPHA_COMBO_REQUIRE_DELAY 100
+#define COMBO_REQUIRE_DELAY 150
+
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
 };
@@ -17,9 +22,8 @@
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <TAPPING_TERM>;
+            quick-tap-ms = <QUICK_TAP>;
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             // all keys on the right hands and thumbs
@@ -34,9 +38,8 @@
         hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <TAPPING_TERM>;
+            quick-tap-ms = <QUICK_TAP>;
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             // all keys on the left hands and thumbs
@@ -79,9 +82,8 @@
             flavor = "balanced";
             #binding-cells = <2>;
             bindings = <&mo>, <&right_space>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <TAPPING_TERM>;
+            quick-tap-ms = <QUICK_TAP>;
             // all keys on the right hands and thumbs
             hold-trigger-key-positions = <
                 4 5 6 7
@@ -96,9 +98,8 @@
             flavor = "balanced";
             #binding-cells = <2>;
             bindings = <&mo>, <&down_bspc>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <TAPPING_TERM>;
+            quick-tap-ms = <QUICK_TAP>;
             // all keys on the left hands and thumbs
             hold-trigger-key-positions = <
                 0 1 2 3
@@ -163,7 +164,7 @@
             key-positions = <0 1>;
             bindings = <&kp SEMI>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
         combo_x {
@@ -171,15 +172,7 @@
             key-positions = <1 2>;
             bindings = <&kp X>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-        combo_z {
-            // pressing both g and c does z
-            key-positions = <5 6>;
-            bindings = <&kp Z>;
-            timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <ALPHA_COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
         combo_b {
@@ -187,7 +180,15 @@
             key-positions = <6 7>;
             bindings = <&kp B>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <ALPHA_COMBO_REQUIRE_DELAY>;
+            layers = <0>;
+        };
+        combo_z_btm {
+            // pressing both s and l does z
+            key-positions = <17 25>;
+            bindings = <&kp Z>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <ALPHA_COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
 
@@ -196,15 +197,7 @@
             key-positions = <8 18>;
             bindings = <&kp COLON>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-        combo_z_btm {
-            // pressing both s and l does z
-            key-positions = <17 25>;
-            bindings = <&kp Z>;
-            timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
 
@@ -213,7 +206,7 @@
             key-positions = <9 10 11>;
             bindings = <&kp HOME>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
         combo_end {
@@ -221,7 +214,7 @@
             key-positions = <14 15 16>;
             bindings = <&kp END>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
 
@@ -230,7 +223,7 @@
             key-positions = <1 10>;
             bindings = <&kp LBKT>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
         combo_rbkt {
@@ -238,7 +231,7 @@
             key-positions = <6 15>;
             bindings = <&kp RBKT>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
         combo_lpar {
@@ -246,7 +239,7 @@
             key-positions = <2 11>;
             bindings = <&kp LPAR>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
         combo_rpar {
@@ -254,7 +247,7 @@
             key-positions = <5 14>;
             bindings = <&kp RPAR>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
         combo_lbrc {
@@ -262,7 +255,7 @@
             key-positions = <3 12>;
             bindings = <&kp LBRC>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
         combo_rbrc {
@@ -270,7 +263,7 @@
             key-positions = <4 13>;
             bindings = <&kp RBRC>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
 
@@ -279,7 +272,7 @@
             key-positions = <20 21>;
             bindings = <&kp MINUS>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
         combo_under {
@@ -287,7 +280,7 @@
             key-positions = <22 23>;
             bindings = <&kp UNDERSCORE>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
 
@@ -296,7 +289,7 @@
             key-positions = <11 14>;
             bindings = <&kp ESC>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
         combo_enter {
@@ -304,7 +297,7 @@
             key-positions = <10 15>;
             bindings = <&kp ENTER>;
             timeout-ms = <20>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
     };
