@@ -52,10 +52,10 @@
             hold-trigger-on-release;
         };
 
-        left_tab: left_tab_morph {
+        left_shift: left_shift_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&kp LEFT>;
+            bindings = <&kp SHIFT>, <&kp LEFT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         right_space: right_space_morph {
@@ -123,7 +123,7 @@
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯  ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp SQT       &kp Q         &kp J         &kp K                                        &kp M         &kp W         &kp V         &kp L
 //╰───────────────────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────┼─────────────┼─────────────┼───────────────────────────╯
-                                &left_tab     &lt_spc SY 0  &lt OT TAB       &caps_word   &lt_bspc SY 0  &up_del
+                                &left_shift   &lt_spc SY 0  &lt OT TAB       &caps_word   &lt_bspc SY 0  &up_del
 //                            ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
             >;
         };
