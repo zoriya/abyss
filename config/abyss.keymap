@@ -55,7 +55,7 @@
         left_shift: left_shift_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SHIFT>, <&kp LEFT>;
+            bindings = <&kp LSHFT>, <&kp LEFT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         right_space: right_space_morph {
