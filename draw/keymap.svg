@@ -54,7 +54,16 @@ text.label {
     font-weight: bold;
     text-anchor: start;
     stroke: white;
-    stroke-width: 2;
+    stroke-width: 4;
+    paint-order: stroke;
+}
+
+/* styling for optional footer */
+text.footer {
+    text-anchor: end;
+    dominant-baseline: auto;
+    stroke: white;
+    stroke-width: 4;
     paint-order: stroke;
 }
 
@@ -220,6 +229,7 @@ path.combo {
 </g>
 <g transform="translate(180, 196)" class="key keypos-26">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
+<text x="0" y="0" class="key tap">LSHFT</text>
 <text x="0" y="-24" class="key shifted">LEFT</text>
 </g>
 <g transform="translate(240, 196)" class="key keypos-27">

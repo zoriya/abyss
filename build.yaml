@@ -22,3 +22,5 @@ include:
     shield: abyss_left
   - board: nice_nano_v2
     shield: abyss_right
+  - board: nice_nano_v2
+    shield: settings_reset
