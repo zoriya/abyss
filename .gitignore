@@ -11,3 +11,4 @@ zmk
 .west
 build
 .venv
+*.FCBak

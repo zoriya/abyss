@@ -129,6 +129,12 @@ outlines:
     - name: board
     - operation: subtract
       name: plate_keys
+  case:
+    - name: board
+    - operation: stack
+      name: xl_board
+    - operation: stack
+      name: raw
   combo:
     - name: board
     - operation: subtract
@@ -290,12 +296,6 @@ pcbs:
           ref: thumb_home_cluster
           shift: [0.5kx + 0.75px, 0.5ky - 0.75py]
 cases:
-  plate:
-    - name: board
-      extrude: plate_thickness
-    - name: plate_keys
-      extrude: plate_thickness
-      operation: subtract
   wall:
     - name: xl_board
       extrude: 15
