@@ -5,6 +5,15 @@
 #define SY 1
 #define OT 2
 
+#define KEYL 0 1 2 3 \
+             8 9 10 11 12 \
+             18 19 20 21 \
+             26 27 28 29 30 31
+#define KEYR 4 5 6 7 \
+             13 14 15 16 17 \
+             22 23 24 25 \
+             26 27 28 29 30 31
+
 #define VOLDWN C_VOLUME_DOWN
 #define VOLUP C_VOLUME_UP
 
@@ -27,13 +36,7 @@
             quick-tap-ms = <QUICK_TAP>;
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
-            // all keys on the right hands and thumbs
-            hold-trigger-key-positions = <
-                4 5 6 7
-                13 14 15 16 17
-                22 23 24 25
-                26 27 28 29 30 31
-            >;
+            hold-trigger-key-positions = <KEYR>;
             hold-trigger-on-release;
         };
         hmr: homerow_mods_right {
@@ -43,13 +46,7 @@
             quick-tap-ms = <QUICK_TAP>;
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
-            // all keys on the left hands and thumbs
-            hold-trigger-key-positions = <
-                0 1 2 3
-                8 9 10 11 12
-                18 19 20 21
-                26 27 28 29 30 31
-            >;
+            hold-trigger-key-positions = <KEYL>;
             hold-trigger-on-release;
         };
 
@@ -85,13 +82,7 @@
             bindings = <&mo>, <&right_space>;
             tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP>;
-            // all keys on the right hands and thumbs
-            hold-trigger-key-positions = <
-                4 5 6 7
-                13 14 15 16 17
-                22 23 24 25
-                26 27 28 29 30 31
-            >;
+            hold-trigger-key-positions = <KEYR>;
             hold-trigger-on-release;
         };
         lt_bspc: layer_tap_bspc {
@@ -101,13 +92,7 @@
             bindings = <&mo>, <&down_bspc>;
             tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP>;
-            // all keys on the left hands and thumbs
-            hold-trigger-key-positions = <
-                0 1 2 3
-                8 9 10 11 12
-                18 19 20 21
-                26 27 28 29 30 31
-            >;
+            hold-trigger-key-positions = <KEYL>;
             hold-trigger-on-release;
         };
     };
