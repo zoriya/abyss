@@ -107,7 +107,7 @@
             hold-trigger-on-release;
         };
 
-        reset: tap_dance_rst {
+        sm_reset: tap_dance_rst {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <TAPPING_TERM>;
@@ -149,7 +149,7 @@
         others {
             bindings = <
 //                  ╭───────────────┬────────────────┬────────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────╮
-                      &none           &none            &none            &reset           &reset        &kp C_MUTE    &kp VOLDWN    &kp VOLUP
+                      &none           &none            &none            &sm_reset        &sm_reset     &kp C_MUTE    &kp VOLDWN    &kp VOLUP
 //╭─────────────────┼───────────────┼────────────────┼────────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼────────────────╮
     &none             &none           &none            &none            &none            &bt BT_SEL 4  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
 //├─────────────────┼───────────────┼────────────────┼────────────────┼─────────────╯  ╰─────────────┼─────────────┼─────────────┼─────────────┼────────────────┤
