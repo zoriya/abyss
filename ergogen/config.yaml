@@ -94,7 +94,7 @@ outlines:
       where: thumb_right_cluster
       bound: false
       size: [1.5kx - 0.5, ky - 0.5]
-  board:
+  board_raw:
     - what: polygon
       operation: stack
       points:
@@ -116,10 +116,13 @@ outlines:
           shift: [1.5kx, -0.5ky - py]
         - ref: matrix_pinky_bottom
           shift: [-0.5kx - px, -0.5ky - py]
+  board:
+    - name: board_raw
       fillet: 4
   xl_board:
-    - name: board
+    - name: board_raw
       expand: 5
+      joints: 1
   plate_keys:
     - what: rectangle
       where: true
@@ -130,19 +133,17 @@ outlines:
     - operation: subtract
       name: plate_keys
   case:
-    - name: board
-    - operation: stack
-      name: xl_board
-    - operation: stack
-      name: raw
-  combo:
-    - name: board
+    - name: xl_board
     - operation: subtract
-      name: keys
-    - operation: stack
-      name: xl_board
+      name: plate_keys
+  combo:
+    - name: case
     - operation: stack
       name: raw
+    - operation: stack
+      name: plate
+    - operation: stack
+      name: board_raw
 pcbs:
   abyss:
     outlines:
@@ -295,26 +296,3 @@ pcbs:
         where:
           ref: thumb_home_cluster
           shift: [0.5kx + 0.75px, 0.5ky - 0.75py]
-cases:
-  wall:
-    - name: xl_board
-      extrude: 15
-    - name: board
-      extrude: 15
-      operation: subtract
-  # usb:
-  #   -name 3x9mm 
-  bottom:
-    - name: board
-      extrude: 3
-    - what: case
-      name: wall
-  case:
-    - name: board
-      extrude: 2
-    - name: raw
-      extrude: 2
-      operation: subtract
-    - what: case
-      name: wall
-      operation: add
