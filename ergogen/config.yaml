@@ -119,10 +119,6 @@ outlines:
   board:
     - name: board_raw
       fillet: 4
-  xl_board:
-    - name: board_raw
-      expand: 5
-      joints: 1
   plate_keys:
     - what: rectangle
       where: true
@@ -133,17 +129,13 @@ outlines:
     - operation: subtract
       name: plate_keys
   case:
-    - name: xl_board
+    - name: board_raw
     - operation: subtract
       name: plate_keys
   combo:
     - name: case
     - operation: stack
       name: raw
-    - operation: stack
-      name: plate
-    - operation: stack
-      name: board_raw
 pcbs:
   abyss:
     outlines:
