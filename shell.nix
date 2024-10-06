@@ -3,7 +3,7 @@ pkgs.mkShell {
   packages = with pkgs; [
     kicad
     nodejs
-    freecad
+    freecad-wayland
     blender
     python3Packages.pip
     # python312Packages.west
