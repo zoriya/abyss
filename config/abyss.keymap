@@ -55,24 +55,28 @@
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&kp LEFT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
         right_space: right_space_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp RIGHT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
         down_bspc: down_dspc_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp DOWN>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
         up_del: up_del_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DEL>, <&kp UP>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
 
         lt_spc: layer_tap_spc {
@@ -120,7 +124,7 @@
 
         default_layer {
             bindings = <
-//              ╭─────────────┬─────────────┬─────────────┬─────────────╮  ╭──────────────┬─────────────┬─────────────┬─────────────╮
+//              ╭─────────────┬─────────────┬─────────────┬─────────────╮  ╭──────────────┬──────────────┬─────────────┬─────────────╮
                   &kp COMMA     &kp DOT       &kp P         &kp Y            &kp F          &kp G          &kp C         &kp R
 //╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├──────────────┼── ───────────┼─────────────┼─────────────┼─────────────╮
     &hml LALT A   &hml LGUI O   &hml LSFT E   &hml LCTL U   &kp I            &kp D          &hmr LCTL H    &hmr LSFT T   &hmr LGUI N   &hmr LALT S
