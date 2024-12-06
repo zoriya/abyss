@@ -56,7 +56,7 @@
         left_shift: left_shift_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp LEFT>;
+            bindings = <&caps_word>, <&kp LEFT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
@@ -103,11 +103,11 @@
             hold-trigger-on-release;
         };
 
-        lt_caps: layer_tap_cap {
+        ltsk: layer_tap_cap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             #binding-cells = <2>;
-            bindings = <&mo>, <&caps_word>;
+            bindings = <&mo>, <&sk>;
             tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYR>;
@@ -127,15 +127,15 @@
 
         default_layer {
             bindings = <
-//              ╭─────────────┬─────────────┬─────────────┬─────────────╮  ╭───────────────┬──────────────┬─────────────┬─────────────╮
-                  &kp COMMA     &kp DOT       &kp P         &kp Y            &kp F           &kp G          &kp C         &kp R
-//╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├───────────────┼──────────────┼─────────────┼─────────────┼─────────────╮
-    &hml LALT A   &hml LGUI O   &hml LSFT E   &hml LCTL U   &kp I            &kp D           &hmr RCTL H    &hmr RSFT T   &hmr RGUI N   &hmr RALT S
-//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯  ╰───────────────┼──────────────┼─────────────┼─────────────┼─────────────┤
-    &kp SQT       &kp Q         &kp J         &kp K                                          &kp M          &kp W         &kp V         &kp L
-//╰───────────────────────────┼─────────────┼─────────────┼─────────────╮  ╭───────────────┼──────────────┼─────────────┼───────────────────────────╯
-                                &left_shift   &lt_spc SY 0  &lt OT TAB       &lt_caps OT 0  &lt_bspc SY 0  &up_del
-//                            ╰─────────────┴─────────────┴─────────────╯  ╰───────────────┴──────────────┴─────────────╯
+//              ╭─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────────┬───────────────┬─────────────┬─────────────╮
+                  &kp COMMA     &kp DOT       &kp P         &kp Y            &kp F             &kp G           &kp C         &kp R
+//╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────────┼───────────────┼─────────────┼─────────────┼─────────────╮
+    &hml LALT A   &hml LGUI O   &hml LSFT E   &hml LCTL U   &kp I            &kp D             &hmr RCTL H     &hmr RSFT T   &hmr RGUI N   &hmr RALT S
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯  ╰─────────────────┼───────────────┼─────────────┼─────────────┼─────────────┤
+    &kp SQT       &kp Q         &kp J         &kp K                                            &kp M           &kp W         &kp V         &kp L
+//╰───────────────────────────┼─────────────┼─────────────┼─────────────╮  ╭─────────────────┼───────────────┼─────────────┼───────────────────────────╯
+                                &left_shift   &lt_spc SY 0  &lt OT TAB       &ltsk OT LSHIFT   &lt_bspc SY 0   &up_del
+//                            ╰─────────────┴─────────────┴─────────────╯  ╰─────────────────┴───────────────┴─────────────╯
             >;
         };
 
