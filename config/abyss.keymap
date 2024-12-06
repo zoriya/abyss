@@ -27,6 +27,12 @@
     /delete-property/ ignore-modifiers;
 };
 
+&sk {
+    quick-release;
+    lazy;
+    /delete-property/ ignore-modifiers;
+};
+
 / {
     behaviors {
         hml: homerow_mods_left {
