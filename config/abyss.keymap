@@ -34,6 +34,8 @@
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP>;
+            // maybe a bit lower than ALPHA_COMBO idk
+            require-prior-idle-ms = <ALPHA_COMBO_REQUIRE_DELAY>;
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             hold-trigger-key-positions = <KEYR>;
@@ -44,6 +46,7 @@
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP>;
+            require-prior-idle-ms = <ALPHA_COMBO_REQUIRE_DELAY>;
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             hold-trigger-key-positions = <KEYL>;
