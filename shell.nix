@@ -1,13 +1,12 @@
-{pkgs ? import <nixpkgs> {}}:
-pkgs.mkShell {
-  packages = with pkgs; [
-    kicad
-    nodejs
-    freecad-wayland
-    blender
-    python3Packages.pip
-    # python312Packages.west
-    # cmake
-    # ninja
-  ];
-}
+{pkgs ? import <nixpkgs> {}}: let
+  keymap-drawer =
+    pkgs.python3Packages.callPackage ./draw {};
+in
+  pkgs.mkShell {
+    packages = with pkgs; [
+      kicad
+      nodejs
+      freecad-wayland
+      keymap-drawer
+    ];
+  }
