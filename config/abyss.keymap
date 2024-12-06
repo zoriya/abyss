@@ -211,15 +211,6 @@
             layers = <0>;
         };
 
-        combo_colon {
-            // pressing both ' and a does :
-            key-positions = <8 18>;
-            bindings = <&kp COLON>;
-            timeout-ms = <20>;
-            require-prior-idle-ms = <COMBO_REQUIRE_DELAY>;
-            layers = <0>;
-        };
-
         combo_home {
             // pressing both oeu does home
             key-positions = <9 10 11>;
