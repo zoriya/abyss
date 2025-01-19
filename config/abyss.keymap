@@ -208,14 +208,6 @@
             require-prior-idle-ms = <ALPHA_COMBO_REQUIRE_DELAY>;
             layers = <0>;
         };
-        combo_z_btm {
-            // pressing both s and l does z
-            key-positions = <17 25>;
-            bindings = <&kp Z>;
-            timeout-ms = <20>;
-            require-prior-idle-ms = <ALPHA_COMBO_REQUIRE_DELAY>;
-            layers = <0>;
-        };
 
         combo_home {
             // pressing both oeu does home
