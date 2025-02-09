@@ -120,17 +120,18 @@
             hold-trigger-on-release;
         };
 
+        // see https://github.com/zmkfirmware/zmk/issues/834 for macro_tap
         caps_lshift: lmod_morph_hold_tap {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ltsk OT LSHIFT>, <&caps_word>;
+            bindings = <&ltsk OT LSHIFT>, <&macro_tap &kp F17 &caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         caps_rshift: rmod_morph_hold_tap {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ltsk OT RSHIFT>, <&caps_word>;
+            bindings = <&ltsk OT RSHIFT>, <&macro_tap &kp F17 &caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
