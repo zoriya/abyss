@@ -1,42 +1,47 @@
 {
   lib,
   buildPythonApplication,
-  fetchPypi,
+  callPackage,
+  fetchFromGitHub,
   poetry-core,
   pydantic,
   pcpp,
-  pyparsing,
   pyyaml,
   platformdirs,
   pydantic-settings,
-}:
-buildPythonApplication rec {
-  pname = "keymap-drawer";
-  version = "0.18.1";
-  pyproject = true;
+  tree-sitter,
+}: let
+  tree-sitter-devicetree = callPackage ./tree-sitter-devicetree.nix {};
+in
+  buildPythonApplication rec {
+    pname = "keymap-drawer";
+    version = "0.20.0";
+    pyproject = true;
 
-  src = fetchPypi {
-    pname = "keymap_drawer";
-    inherit version;
-    hash = "sha256-MHjxsopXoYWZFuXUbeaI7BCSx3HkRaeVidY+mc8lj+s=";
-  };
+    src = fetchFromGitHub {
+      owner = "caksoylar";
+      repo = pname;
+      rev = "ea00f44ac5a2ebe97b8b31f9166791bedf9136e5";
+      hash = "sha256-F9lDUuqHKl2FOUsUszJrRK7/a/a1UJLw+RUg9Bv2zN0=";
+    };
 
-  build-system = [poetry-core];
+    build-system = [poetry-core];
 
-  propagatedBuildInputs = [
-    pydantic
-    pcpp
-    pyparsing
-    pyyaml
-    platformdirs
-    pydantic-settings
-  ];
+    propagatedBuildInputs = [
+      pydantic
+      pcpp
+      pyyaml
+      platformdirs
+      pydantic-settings
+      tree-sitter
+      tree-sitter-devicetree
+    ];
 
-  doCheck = false;
+    doCheck = false;
 
-  meta = {
-    homepage = "https://github.com/caksoylar/keymap-drawer";
-    description = "Parse QMK & ZMK keymaps and draw them as vector graphics";
-    license = lib.licenses.mit;
-  };
-}
+    meta = {
+      homepage = "https://github.com/caksoylar/keymap-drawer";
+      description = "Parse QMK & ZMK keymaps and draw them as vector graphics";
+      license = lib.licenses.mit;
+    };
+  }
