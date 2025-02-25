@@ -23,7 +23,8 @@
 #define COMBO_REQUIRE_DELAY 150
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE LSHFT RSHFT>;
+    mods = <(MOD_LSFT | MOD_RSFT)>;
     /delete-property/ ignore-modifiers;
 };
 
@@ -123,14 +124,14 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&ltsk OT LSHIFT>, <&caps_word>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <MOD_RSFT>;
         };
 
         caps_rshift: rmod_morph_hold_tap {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&ltsk OT RSHIFT>, <&caps_word>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <MOD_LSFT>;
         };
 
         sm_reset: tap_dance_rst {
