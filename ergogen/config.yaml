@@ -120,17 +120,10 @@ outlines:
       where: true
       bound: false
       size: [kcox, kcoy]
-  mcu:
-  - what: rectangle
-    where: matrix_middle_top
-    size: [17.8, 21]
-    adjust.shift: [-2.5kx - 1 + 0.5 * 17.8, 0]
   combo:
     - name: board
     - operation: stack
       name: keys
-    - operation: stack
-      name: mcu
 pcbs:
   abyss:
     outlines:
@@ -154,45 +147,6 @@ pcbs:
           to: "{{row_net}}"
         adjust:
           shift: [0, -5]
-
-      xiao:
-        what: inline/xiao
-        params:
-          P0: 'C0'   # Column Pinky
-          P1: 'C1'   # Column Ring
-          P2: 'C2'   # Column Middle
-          P3: 'C3'   # Column Index
-          P4: 'C4'   # Column Inner
-          P5: 'C5'   # Column Thumb
-          P6: 'R0'   # Row Top
-          P7: 'R1'   # Row Home
-          P8: 'R2'   # Row Bottom
-          P9: 'R3'   # Row Thumb
-        where:
-          ref: matrix_middle_top
-          shift: [-2.5kx - 1, -21/2]
-          rotate: -90
-
-      reset_switch:
-        what: infused-kim/switch_reset
-        params:
-          reverse: true
-          from: GND
-          to: RST
-        where:
-          ref: matrix_inner_home
-          shift: [-0.25kx, 1.25ky]
-          rotate: 90
-      power_switch:
-        what: infused-kim/switch_power
-        params:
-          reverse: true
-          from: BAT_P
-          to: RAW
-        where:
-          ref: matrix_inner_home
-          shift: [0.25kx, 1.25ky]
-          rotate: 90
 
       battery_connector:
         what: ceoloide/battery_connector_jst_ph_2

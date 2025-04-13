@@ -7,6 +7,6 @@ in
       kicad
       nodejs
       freecad-wayland
-      keymap-drawer
+      # keymap-drawer
     ];
   }
