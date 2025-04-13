@@ -5,9 +5,8 @@ meta:
 units:
   kx: cx
   ky: cy
-  px: 4
-  py: 4
-  mc_width: 18+2
+  px: 2
+  py: 2
 
   # dont forget that choc v2 is essentially mx
   plate_thickness: 1.2 # choc: 1.2, mx: 1.5
@@ -56,19 +55,16 @@ points:
         spread: 1kx
       anchor:
         ref: matrix_index_bottom
-        shift: [-kx/2, -ky * 1.5]
+        shift: [-0.5kx, -1.25ky]
       columns:
         left:
           key.column_net: C3
         home:
           key.column_net: C4
-          key.spread: kx+2
-          key.splay: -15
-          key.origin: [-0.5kx, -0.5ky]
         right:
           key.column_net: C5
-          key.spread: kx+2
-          key.splay: -15
+          key.spread: kx+1
+          key.splay: -10
           key.origin: [-0.5kx, -0.5ky]
           key.width: 1.5kx
           key.rotate: 90
@@ -103,17 +99,17 @@ outlines:
         - ref: matrix_middle_top
           shift: [0.5kx + px, 0.5ky + py]
         - ref: matrix_middle_top
-          shift: [2.5kx + mc_width, 0.5ky + py]
+          shift: [2.5kx + px, 0.5ky + py]
         - ref: matrix_middle_top
-          shift: [2.5kx + mc_width, -3.5ky + py]
+          shift: [2.5kx + px, -3ky + 0.75py]
         - ref: thumb_right_cluster
-          shift: [0.5kx + 2px, -0.5ky - py]
+          shift: [0.5kx + 3px, -0.5ky - py]
         - ref: thumb_right_cluster
-          shift: [-0.5kx - 2px, -0.5ky - py]
+          shift: [-0.5kx - 3px, -0.5ky - py]
         - ref: thumb_left_cluster
           shift: [-0.5kx - px, -0.5ky - py]
         - ref: matrix_pinky_bottom
-          shift: [1.5kx, -0.5ky - py]
+          shift: [2kx - px, -0.5ky - py]
         - ref: matrix_pinky_bottom
           shift: [-0.5kx - px, -0.5ky - py]
   board:
@@ -124,18 +120,14 @@ outlines:
       where: true
       bound: false
       size: [kcox, kcoy]
-  plate:
-    - name: board
-    - operation: subtract
-      name: plate_keys
   case:
     - name: board_raw
     - operation: subtract
       name: plate_keys
   combo:
-    - name: case
+    - name: board
     - operation: stack
-      name: raw
+      name: keys
 pcbs:
   abyss:
     outlines:
