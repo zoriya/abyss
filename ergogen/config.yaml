@@ -152,39 +152,19 @@ pcbs:
         adjust:
           shift: [0, -5]
 
-      promicro:
-        what: infused-kim/nice_nano_pretty
+      xiao:
+        what: inline/xiao
         params:
-          traces: true
-
-          # all pins in up-down order (first left side then right side)
-          # GND (fake pin)
-          P0: 'DPD'   # Display Data (unused)
-          P1: 'DPC'   # Display Clock (unused)
-          # GND
-          # GND
-          P2: 'F0'    # Free
-          P3: 'F1'    # Free
-          P4: 'R0'    # Row Top
-          P5: 'R1'    # Row Home
-          P6: 'R2'    # Row Bottom
-          P7: 'R3'    # Row Thumb
-          P8: 'F8'    # Free
-          P9: 'DPE'   # Display CS (nice!view only) (unused)
-
-          # Left Side
-          # RAW       # Battery Pos
-          # GND       # Ground / Battery Neg
-          # RST       # Reset pin
-          # VCC       # External Power
-          P21: 'C0'   # Column Pinky
-          P20: 'C1'   # Column Ring
-          P19: 'C2'   # Column Middle
-          P18: 'C3'   # Column Index
-          P15: 'C4'   # Column Inner
-          P14: 'C5'   # Column Thumb
-          P16: 'F16'  # Free, but could be Encoder 1
-          P10: 'F10'  # Free, but could be Encoder 2
+          P0: 'C0'   # Column Pinky
+          P1: 'C1'   # Column Ring
+          P2: 'C2'   # Column Middle
+          P3: 'C3'   # Column Index
+          P4: 'C4'   # Column Inner
+          P5: 'C5'   # Column Thumb
+          P6: 'R0'   # Row Top
+          P7: 'R1'   # Row Home
+          P8: 'R2'   # Row Bottom
+          P9: 'R3'   # Row Thumb
         where:
           ref: matrix_inner_bottom
           shift: [1kx+1, 0.5ky]
@@ -221,62 +201,3 @@ pcbs:
           ref: matrix_inner_home
           shift: [0, 0.75ky]
           rotate: 90
-
-      mounts_top_left:
-        what: infused-kim/mounting_hole
-        params:
-          drill: 2.9 #m3
-        where:
-          ref: matrix_middle_top
-          shift: [-2.5kx, 0.5ky]
-      mounts_top_right:
-        what: infused-kim/mounting_hole
-        params:
-          drill: 2.9 #m3
-        where:
-          ref: matrix_middle_top
-          shift: [2.5kx + mc_width - px, 0.5ky]
-      mounts_middle_right:
-        what: infused-kim/mounting_hole
-        params:
-          drill: 2.9 #m3
-        where:
-          ref: matrix_middle_bottom
-          shift: [2.5kx + mc_width - px, -1.25ky]
-      mounts_bottom_left:
-        what: infused-kim/mounting_hole
-        params:
-          drill: 2.9 #m3
-        where:
-          ref: matrix_middle_bottom
-          shift: [-2.5kx, -1.25ky]
-      mounts_thumb_left:
-        what: infused-kim/mounting_hole
-        params:
-          drill: 2.9 #m3
-        where:
-          ref: thumb_left_cluster
-          shift: [-0.5kx - 0.25px, -0.5ky - 0.25py]
-      mounts_thumb_right:
-        what: infused-kim/mounting_hole
-        params:
-          drill: 2.9 #m3
-        where:
-          ref: thumb_right_cluster
-          shift: [-0.5kx - 1.25px, -0.5ky]
-
-      mounts_plate_left:
-        what: infused-kim/mounting_hole
-        where:
-          ref: matrix_ring_home
-          shift: [-0.5kx, -0.5ky]
-      mounts_plate_right:
-        what: infused-kim/mounting_hole
-        where:
-          ref: matrix_index_top
-          shift: [0.5kx, -0.5ky]
-      mounts_plate_thumb:
-        what: infused-kim/mounting_hole
-        where:
-          ref: thumb_home_cluster
-          shift: [0.5kx + 0.75px, 0.5ky - 0.75py]
