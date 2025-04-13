@@ -120,14 +120,17 @@ outlines:
       where: true
       bound: false
       size: [kcox, kcoy]
-  case:
-    - name: board_raw
-    - operation: subtract
-      name: plate_keys
+  mcu:
+  - what: rectangle
+    where: matrix_middle_top
+    size: [17.8, 21]
+    adjust.shift: [-2.5kx - 1 + 0.5 * 17.8, 0]
   combo:
     - name: board
     - operation: stack
       name: keys
+    - operation: stack
+      name: mcu
 pcbs:
   abyss:
     outlines:
@@ -166,8 +169,9 @@ pcbs:
           P8: 'R2'   # Row Bottom
           P9: 'R3'   # Row Thumb
         where:
-          ref: matrix_inner_bottom
-          shift: [1kx+1, 0.5ky]
+          ref: matrix_middle_top
+          shift: [-2.5kx - 1, -21/2]
+          rotate: -90
 
       reset_switch:
         what: infused-kim/switch_reset
