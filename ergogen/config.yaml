@@ -64,6 +64,7 @@ points:
         right:
           key.column_net: C5
           key.splay: -7
+          key.spread: (kx+ky)/2
           key.origin: [-0.5kx, -0.5ky]
           key.width: 1.5kx
           key.rotate: 90
@@ -102,9 +103,9 @@ outlines:
         - ref: matrix_middle_top
           shift: [2.5kx + px, -2.5ky - py - 0.25ky]
         - ref: thumb_right_cluster
-          shift: [0.75kx + px, 0.43py]
+          shift: [0.75kx + px, 0.2py]
         - ref: thumb_right_cluster
-          shift: [0.75kx + px, -0.5ky - py]
+          shift: [0.75kx + px, -0.5ky - px]
         - ref: thumb_right_cluster
           shift: [-0.75kx - px, -0.5ky - py]
         - ref: thumb_left_cluster
