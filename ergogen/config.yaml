@@ -65,7 +65,7 @@ points:
           key.column_net: C5
           key.splay: -7
           key.spread: (kx+ky)/2
-          key.origin: [-0.5kx, -0.5ky]
+          key.origin: [-0.5ky, -0.5kx]
           key.width: 1.5kx
           key.rotate: 90
       rows:
