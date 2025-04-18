@@ -5,8 +5,8 @@ meta:
 units:
   kx: cx
   ky: cy
-  px: 3
-  py: 3
+  px: 2
+  py: 2
 
   # dont forget that choc v2 is essentially mx
   plate_thickness: 1.2 # choc: 1.2, mx: 1.5
@@ -63,8 +63,7 @@ points:
           key.column_net: C4
         right:
           key.column_net: C5
-          key.spread: kx+1
-          key.splay: -10
+          key.splay: -7
           key.origin: [-0.5kx, -0.5ky]
           key.width: 1.5kx
           key.rotate: 90
@@ -90,7 +89,7 @@ outlines:
       where: thumb_right_cluster
       bound: false
       size: [1.5kx - 0.5, ky - 0.5]
-  board_raw:
+  board:
     - what: polygon
       operation: stack
       points:
@@ -101,20 +100,19 @@ outlines:
         - ref: matrix_middle_top
           shift: [2.5kx + px, 0.5ky + py]
         - ref: matrix_middle_top
-          shift: [2.5kx + px, -3ky + 0.75py]
+          shift: [2.5kx + px, -2.5ky - py - 0.25ky]
         - ref: thumb_right_cluster
-          shift: [0.5kx + 3px, -0.5ky - py]
+          shift: [0.75kx + px, 0.43py]
         - ref: thumb_right_cluster
-          shift: [-0.5kx - 3px, -0.5ky - py]
+          shift: [0.75kx + px, -0.5ky - py]
+        - ref: thumb_right_cluster
+          shift: [-0.75kx - px, -0.5ky - py]
         - ref: thumb_left_cluster
           shift: [-0.5kx - px, -0.5ky - py]
         - ref: matrix_pinky_bottom
           shift: [2kx - px, -0.5ky - py]
         - ref: matrix_pinky_bottom
           shift: [-0.5kx - px, -0.5ky - py]
-  board:
-    - name: board_raw
-      fillet: 4
   plate_keys:
     - what: rectangle
       where: true
