@@ -100,16 +100,16 @@ outlines:
           shift: [0.5kx + px, 0.5ky + py]
         - ref: matrix_middle_top
           shift: [2.5kx + px, 0.5ky + py]
-        - ref: matrix_middle_top
-          shift: [2.5kx + px, -2.5ky - py - 0.25ky]
-        - ref: thumb_right_cluster
-          shift: [0.75kx + px, 0.2py]
-        - ref: thumb_right_cluster
-          shift: [0.75kx + px, -0.5ky - px]
-        - ref: thumb_right_cluster
-          shift: [-0.75kx - px, -0.5ky - py]
         - ref: thumb_left_cluster
-          shift: [-0.5kx - px, -0.5ky - py]
+          shift: [2kx + px, 0.75kx + py - 0.5]
+        - ref: thumb_left_cluster
+          # 3.29 is sin(7deg)*1.5kx
+          shift: [2kx + .5ky + px + 2, 0.75kx + px - 0.5]
+        - ref: thumb_left_cluster
+          # 2.07 is sin(7deg)*ky
+          shift: [2kx + .5ky + px + 2, -0.75kx - py - 2]
+        - ref: thumb_left_cluster
+          shift: [-0.5kx - px, -0.75kx - py - 2]
         - ref: matrix_pinky_bottom
           shift: [2kx - px, -0.5ky - py]
         - ref: matrix_pinky_bottom
