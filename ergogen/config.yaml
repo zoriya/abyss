@@ -23,10 +23,15 @@ points:
         spread: 1kx
       columns:
         pinky:
-          key.column_net: C0
+          key.column_net: C1
           rows:
             top:
               skip: true
+            home:
+              row_net: R4
+            bottom:
+              column_net: C2
+              row_net: R4
         ring:
           key.column_net: C1
           key.stagger: ky/2
@@ -42,13 +47,17 @@ points:
           rows:
             top:
               skip: true
+            home:
+              row_net: R1
+            bottom:
+              row_net: R2
       rows:
         bottom:
-          row_net: R2
+          row_net: R3
         home:
-          row_net: R1
+          row_net: R2
         top:
-          row_net: R0
+          row_net: R1
     thumb:
       key:
         padding: 1ky
@@ -59,18 +68,20 @@ points:
       columns:
         left:
           key.column_net: C3
+          key.row_net: R4
         home:
           key.column_net: C4
+          key.row_net: R4
         right:
-          key.column_net: C5
+          key.column_net: C4
+          key.row_net: R3
           key.splay: -7
           key.spread: (kx+ky)/2
           key.origin: [-0.5ky, -0.5kx]
           key.width: 1.5kx
           key.rotate: 90
       rows:
-        cluster:
-          row_net: R3
+        cluster: {}
 outlines:
   raw:
     - what: rectangle
