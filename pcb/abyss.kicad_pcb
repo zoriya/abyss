@@ -2184,7 +2184,7 @@
 			(at 0.0523 -10.696 0)
 			(unlocked yes)
 			(layer "User.4")
-			(uuid "4ad69678-09eb-4942-b225-7c7cf8e15ee5")
+			(uuid "6550f4bc-6825-44f7-83b2-23784ba93a4e")
 			(effects
 				(font
 					(size 0.2032 0.254)
@@ -2197,7 +2197,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "54097f9b-3e75-4d00-9dd6-a35e6a2b71cc")
+			(uuid "91b57b77-d489-411e-9d77-5c131145a0dc")
 			(effects
 				(font
 					(size 0.635 0.635)
@@ -2210,7 +2210,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "043a072c-1396-4faa-8f2f-e7d3daa1b88d")
+			(uuid "225a7021-eeba-4ad8-8ade-f3de8ffbd6ba")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2223,7 +2223,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "8d634334-0671-4fdd-a92d-2707a069cc73")
+			(uuid "d7d9cb68-1442-46e1-9baa-8da7ce525d01")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2790,6 +2790,7 @@
 			(at -8.907962 -7.556038 90)
 			(size 1.626 3)
 			(layers "B.Cu" "B.Mask" "B.Paste")
+			(net 25 "BAT_P")
 			(solder_mask_margin 0.05)
 			(uuid "6a7e0828-0cce-47e0-8fdc-e911f1b5e7da")
 		)
@@ -2804,6 +2805,7 @@
 			(at -8.907962 -5.016038 90)
 			(size 1.626 3)
 			(layers "B.Cu" "B.Mask" "B.Paste")
+			(net 26 "GND")
 			(solder_mask_margin 0.05)
 			(uuid "577ae17d-7926-4cbd-9199-1c83cf6d4680")
 		)
@@ -2967,6 +2969,7 @@
 			(at 9.000038 -5.016038 270)
 			(size 1.626 3)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 26 "GND")
 			(solder_mask_margin 0.05)
 			(uuid "2752beab-3735-4a44-bcbf-902a9b4fe4a1")
 		)
@@ -2981,6 +2984,7 @@
 			(at 9.000038 -7.556038 270)
 			(size 1.626 3)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 25 "BAT_P")
 			(solder_mask_margin 0.05)
 			(uuid "dda0020a-92b2-49e2-a698-54c7ce40a7f9")
 		)
@@ -2996,6 +3000,7 @@
 			(size 2.5 1.5)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
+			(net 26 "GND")
 			(solder_mask_margin 0.0254)
 			(thermal_bridge_angle 45)
 			(uuid "a437f928-b453-434f-99ba-9793d7079834")
@@ -3005,6 +3010,7 @@
 			(size 2.5 1.5)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
+			(net 25 "BAT_P")
 			(solder_mask_margin 0.0254)
 			(thermal_bridge_angle 45)
 			(uuid "48289786-59f1-49d8-a021-70aa898c63fd")
@@ -3014,6 +3020,7 @@
 			(size 2.5 1.5)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
+			(net 26 "GND")
 			(solder_mask_margin 0.0254)
 			(thermal_bridge_angle 45)
 			(uuid "03015571-f32c-4ab7-96d7-787eb389dd10")
@@ -3023,6 +3030,7 @@
 			(size 2.5 1.5)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
+			(net 25 "BAT_P")
 			(solder_mask_margin 0.0254)
 			(thermal_bridge_angle 45)
 			(uuid "c1d6536f-2c7d-4615-a822-60b4f5e4264d")
