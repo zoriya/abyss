@@ -403,7 +403,7 @@
 	)
 	(fp_rect
 		(start -2.274962 3.063962)
-		(end 2.275038 5.563962)
+		(end 2.275038 4.763962)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -433,6 +433,19 @@
 		(fill no)
 		(layer "User.1")
 		(uuid "2186e2c7-7c94-4959-b312-e871f2c3e1e4")
+	)
+	(fp_text user "3V3/VCC"
+		(at 5.3 -2.2 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "01139bd9-8811-4a1b-8e10-a70b31bea41d")
+		(effects
+			(font
+				(size 0.3 0.3)
+				(thickness 0.0375)
+			)
+			(justify left bottom)
+		)
 	)
 	(fp_text user "D3/C1"
 		(at -7.3 0.3 0)
@@ -611,11 +624,11 @@
 		(uuid "1c55721a-392c-4254-82c5-e929ecd6faa9")
 	)
 	(pad "1" smd oval
-		(at -8.907962 -7.556038 90)
+		(at 9.000038 -7.556038 270)
 		(size 1.626 3)
 		(layers "B.Cu" "B.Mask" "B.Paste")
 		(solder_mask_margin 0.05)
-		(uuid "eb2c2c17-94fa-424d-b0b3-01027ac7e7de")
+		(uuid "3bc19e5d-c3b9-4f68-8b2d-a5ae294cf29a")
 	)
 	(pad "2" smd oval
 		(at -8.907962 -5.016038 90)
@@ -625,11 +638,11 @@
 		(uuid "704ee6cc-e810-49ab-9290-925a320a6d81")
 	)
 	(pad "2" smd oval
-		(at -8.907962 -5.016038 90)
+		(at 9.000038 -5.016038 270)
 		(size 1.626 3)
 		(layers "B.Cu" "B.Mask" "B.Paste")
 		(solder_mask_margin 0.05)
-		(uuid "f9746368-1452-4a2b-b715-2c08aaa7a8f0")
+		(uuid "8b1d3d30-e692-444b-8b25-11509bd41573")
 	)
 	(pad "3" smd oval
 		(at -8.907962 -2.476038 90)
@@ -639,11 +652,11 @@
 		(uuid "4e298f86-15ef-4963-aab1-1270ef47e597")
 	)
 	(pad "3" smd oval
-		(at -8.907962 -2.476038 90)
+		(at 9.000038 -2.476038 270)
 		(size 1.626 3)
 		(layers "B.Cu" "B.Mask" "B.Paste")
 		(solder_mask_margin 0.05)
-		(uuid "923f549d-a9d2-4948-b9d9-96bd890774b4")
+		(uuid "c6670a4a-53b4-4ad5-a628-007ef1f631d0")
 	)
 	(pad "4" smd oval
 		(at -8.907962 0.063962 90)
@@ -758,18 +771,25 @@
 		(uuid "ae3f2035-988e-442b-964d-6b4f87056376")
 	)
 	(pad "12" smd oval
+		(at -8.907962 -2.476038 90)
+		(size 1.626 3)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(solder_mask_margin 0.05)
+		(uuid "923f549d-a9d2-4948-b9d9-96bd890774b4")
+	)
+	(pad "12" smd oval
 		(at 9.000038 -2.476038 270)
 		(size 1.626 3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.05)
 		(uuid "ba3029e8-1bb7-4515-99c6-b49cba20718c")
 	)
-	(pad "12" smd oval
-		(at 9.000038 -2.476038 270)
+	(pad "13" smd oval
+		(at -8.907962 -5.016038 90)
 		(size 1.626 3)
 		(layers "B.Cu" "B.Mask" "B.Paste")
 		(solder_mask_margin 0.05)
-		(uuid "c6670a4a-53b4-4ad5-a628-007ef1f631d0")
+		(uuid "f9746368-1452-4a2b-b715-2c08aaa7a8f0")
 	)
 	(pad "13" smd oval
 		(at 9.000038 -5.016038 270)
@@ -778,12 +798,12 @@
 		(solder_mask_margin 0.05)
 		(uuid "cdc30211-61de-4fda-9a96-b31c9230e38d")
 	)
-	(pad "13" smd oval
-		(at 9.000038 -5.016038 270)
+	(pad "14" smd oval
+		(at -8.907962 -7.556038 90)
 		(size 1.626 3)
 		(layers "B.Cu" "B.Mask" "B.Paste")
 		(solder_mask_margin 0.05)
-		(uuid "8b1d3d30-e692-444b-8b25-11509bd41573")
+		(uuid "eb2c2c17-94fa-424d-b0b3-01027ac7e7de")
 	)
 	(pad "14" smd oval
 		(at 9.000038 -7.556038 270)
@@ -792,12 +812,14 @@
 		(solder_mask_margin 0.05)
 		(uuid "8e466c24-9227-4465-8fc7-d38356c715b0")
 	)
-	(pad "14" smd oval
-		(at 9.000038 -7.556038 270)
-		(size 1.626 3)
+	(pad "15" smd roundrect
+		(at -0.999962 5.063962 270)
+		(size 2.5 1.5)
 		(layers "B.Cu" "B.Mask" "B.Paste")
-		(solder_mask_margin 0.05)
-		(uuid "3bc19e5d-c3b9-4f68-8b2d-a5ae294cf29a")
+		(roundrect_rratio 0.25)
+		(solder_mask_margin 0.0254)
+		(thermal_bridge_angle 45)
+		(uuid "10cc64d0-8d23-4439-b5f3-e973b2b30058")
 	)
 	(pad "15" smd roundrect
 		(at 1.000038 5.063962 270)
@@ -808,24 +830,6 @@
 		(thermal_bridge_angle 45)
 		(uuid "180e6a64-3faa-4a55-b737-c28d47143933")
 	)
-	(pad "15" smd roundrect
-		(at 1.000038 5.063962 270)
-		(size 2.5 1.5)
-		(layers "B.Cu" "B.Mask" "B.Paste")
-		(roundrect_rratio 0.25)
-		(solder_mask_margin 0.0254)
-		(thermal_bridge_angle 45)
-		(uuid "1bf9bf01-5df3-4852-bd16-42c3a77f21da")
-	)
-	(pad "16" smd roundrect
-		(at -0.999962 5.063962 270)
-		(size 2.5 1.5)
-		(layers "B.Cu" "B.Mask" "B.Paste")
-		(roundrect_rratio 0.25)
-		(solder_mask_margin 0.0254)
-		(thermal_bridge_angle 45)
-		(uuid "10cc64d0-8d23-4439-b5f3-e973b2b30058")
-	)
 	(pad "16" smd roundrect
 		(at -0.999962 5.068962 270)
 		(size 2.5 1.5)
@@ -834,6 +838,15 @@
 		(solder_mask_margin 0.0254)
 		(thermal_bridge_angle 45)
 		(uuid "6aab1913-a6f1-4388-960d-70ab68ef556a")
+	)
+	(pad "16" smd roundrect
+		(at 1.000038 5.063962 270)
+		(size 2.5 1.5)
+		(layers "B.Cu" "B.Mask" "B.Paste")
+		(roundrect_rratio 0.25)
+		(solder_mask_margin 0.0254)
+		(thermal_bridge_angle 45)
+		(uuid "1bf9bf01-5df3-4852-bd16-42c3a77f21da")
 	)
 	(pad "17" smd circle
 		(at -1.274962 -6.021038 270)
