@@ -16,12 +16,12 @@ A 32 key split keyboard with a low pinky column.
 |  32x  | diodes | |
 |  14x  | magnets | 3x6mm |
 |   6x  | magnets | 1x6mm????? |
-|   8x  | m2 screws | 4mm ???? |
-|   4x  | m2 standoff | 4mm wide, 3mm height  ???? |
+|   4x  | m2 screws | 4mm ???? |
+|   4x  | m2 standoff | 4mm wide, 6mm height  ???? |
 
 ## Info
 
- Case height:  1.6mm (pcb) + 3.1mm (hotswap socket) + 5.5mm (choc size on top of the pcb)
+Case height: 10.5mm -> 1.6mm (pcb) + 3.1mm (hotswap socket) + 5.5mm (choc size on top of the pcb)
 
 ## Keymap
 
