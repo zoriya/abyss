@@ -15,9 +15,9 @@ A 32 key split keyboard with a low pinky column.
 |  32x  | hotswap chock sockets | |
 |  32x  | diodes | |
 |  14x  | magnets | 3x6mm |
-|   6x  | magnets | 1x6mm????? |
-|   4x  | m2 screws | 4mm ???? |
-|   4x  | m2 standoff | 4mm wide, 6mm height  ???? |
+|   6x  | magnets | [1x6mm](https://www.aliexpress.us/item/3256809531283174.html?spm=a2g0o.productlist.main.4.40ba51212c0Deo&aem_p4p_detail=202509010522466451792268114080006371275&algo_pvid=7e6d70c3-9fac-491e-ad4b-6f626d5bf2e2&algo_exp_id=7e6d70c3-9fac-491e-ad4b-6f626d5bf2e2-3&pdp_ext_f=%7B%22order%22%3A%221%22%2C%22eval%22%3A%221%22%7D&pdp_npi=6%40dis%21USD%214.46%213.21%21%21%214.46%213.21%21%402103868817567293667515955e9050%2112000049939869309%21sea%21US%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A8c8b81cd%3Bm03_new_user%3A-29895&curPageLogUid=1SsSuJ8YjbqV&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005009717597926%7C_p_origin_prod%3A&search_p4p_id=202509010522466451792268114080006371275_1) |
+|   4x  | m2 screws | 4/6/8mm, |
+|   4x  | m2 standoff | [<6mm wide, 6mm height](https://www.aliexpress.us/item/3256804230166399.html?spm=a2g0o.productlist.main.6.3a56Op21Op215V&algo_pvid=0788da77-fa40-49b3-9d72-f4cf68a2b90f&algo_exp_id=0788da77-fa40-49b3-9d72-f4cf68a2b90f-5&pdp_ext_f=%7B%22order%22%3A%22229%22%2C%22eval%22%3A%221%22%7D&pdp_npi=6%40dis%21USD%212.35%210.99%21%21%212.35%210.99%21%40211b655217567292930196247e11b4%2112000029108517137%21sea%21US%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A8c8b81cd%3Bm03_new_user%3A-29895%3BpisId%3A5000000174221208&curPageLogUid=uw39hgxJul2o&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005004416481151%7C_p_origin_prod%3A#nav-description)|
 
 ## Info
 
