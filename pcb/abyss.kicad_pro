@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 2.0,
-          "width": 2.0
+          "drill": 0.0,
+          "height": 1.5494,
+          "width": 0.6604
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -118,7 +118,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.2,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.075,
         "min_groove_width": 0.0,

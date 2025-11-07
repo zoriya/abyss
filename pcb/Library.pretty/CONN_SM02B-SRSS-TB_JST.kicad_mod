@@ -341,7 +341,7 @@
 			(justify left bottom)
 		)
 	)
-	(fp_text user "+"
+	(fp_text user "-"
 		(at -1.2 1.3 0)
 		(unlocked yes)
 		(layer "B.SilkS")
@@ -354,7 +354,7 @@
 			(justify left bottom)
 		)
 	)
-	(fp_text user "-"
+	(fp_text user "+"
 		(at -0.2 1.3 0)
 		(unlocked yes)
 		(layer "B.SilkS")
