@@ -22,15 +22,6 @@
 #define ALPHA_COMBO_REQUIRE_DELAY 100
 #define COMBO_REQUIRE_DELAY 150
 
-capslock_word: behavior_capslock_word {
-    compatible = "zmk,behavior-capslock";
-    #binding-cells = <0>;
-    capslock-press-ms = <5>;
-    enable-on-press;
-    disable-on-next-release;
-    disable-on-keys = <SPACE TAB ENTER>;
-};
-
 &sk {
     quick-release;
     /delete-property/ ignore-modifiers;
@@ -121,6 +112,16 @@ capslock_word: behavior_capslock_word {
             quick-tap-ms = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYR>;
             hold-trigger-on-release;
+        };
+
+        capslock_word: cplkwrd {
+            compatible = "zmk,behavior-capslock";
+            #binding-cells = <0>;
+            capslock-press-duration = <95>;
+            enable-on-press;
+            disable-on-next-release;
+            disable-on-keys = <SPACE TAB ENTER>;
+            display-name = "Capslock word";
         };
 
         caps_lshift: lmod_morph_hold_tap {
