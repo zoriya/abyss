@@ -18,9 +18,9 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: xiao_ble
     shield: abyss_left
-  - board: nice_nano_v2
+  - board: xiao_ble
     shield: abyss_right
-  - board: nice_nano_v2
+  - board: xiao_ble
     shield: settings_reset

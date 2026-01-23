@@ -2,17 +2,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: urob
-      url-base: https://github.com/urob
-    - name: zoriya
-      url-base: https://github.com/zoriya
+    - name: snoyer
+      url-base: https://github.com/snoyer
   projects:
     - name: zmk
-      # remote: zmkfirmware
-      # Using urob's fork until https://github.com/zmkfirmware/zmk/pull/1451 get's merged
-      # my fork is updated and cherry-picked the relevent commit from previous PR.
-      remote: zoriya
+      remote: zmkfirmware
+      # remote: zoriya
       revision: main
       import: app/west.yml
+    - name:  zmk-behavior-capslock
+      remote: snoyer
+      revision: main
   self:
     path: config

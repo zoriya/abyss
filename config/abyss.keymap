@@ -22,10 +22,13 @@
 #define ALPHA_COMBO_REQUIRE_DELAY 100
 #define COMBO_REQUIRE_DELAY 150
 
-&caps_word {
-    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE LSHFT RSHFT>;
-    mods = <(MOD_LSFT | MOD_RSFT)>;
-    /delete-property/ ignore-modifiers;
+capslock_word: behavior_capslock_word {
+    compatible = "zmk,behavior-capslock";
+    #binding-cells = <0>;
+    capslock-press-ms = <5>;
+    enable-on-press;
+    disable-on-next-release;
+    disable-on-keys = <SPACE TAB ENTER>;
 };
 
 &sk {
@@ -123,14 +126,14 @@
         caps_lshift: lmod_morph_hold_tap {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ltsk OT LSHIFT>, <&caps_word>;
+            bindings = <&ltsk OT LSHIFT>, <&capslock_word>;
             mods = <MOD_RSFT>;
         };
 
         caps_rshift: rmod_morph_hold_tap {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&ltsk OT RSHIFT>, <&caps_word>;
+            bindings = <&ltsk OT RSHIFT>, <&capslock_word>;
             mods = <MOD_LSFT>;
         };
 

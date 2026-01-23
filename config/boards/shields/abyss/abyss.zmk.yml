@@ -3,7 +3,7 @@ id: abyss
 name: abyss
 type: shield
 url: https://github.com/zoriya/abyss
-requires: [pro_micro]
+requires: [xiao_ble]
 features:
   - keys
 siblings:
