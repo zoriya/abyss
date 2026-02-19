@@ -33,3 +33,7 @@
         diode-direction = "col2row";
     };
 };
+
+&xiao_serial {
+    status = "disabled";
+};

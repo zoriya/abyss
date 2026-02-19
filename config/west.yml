@@ -4,14 +4,14 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: snoyer
-      url-base: https://github.com/snoyer
+    # - name: snoyer
+    #   url-base: https://github.com/snoyer
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    - name:  zmk-behavior-capslock
-      remote: snoyer
-      revision: main
+    # - name:  zmk-behavior-capslock
+    #   remote: snoyer
+    #   revision: main
   self:
     path: config

@@ -114,29 +114,29 @@
             hold-trigger-on-release;
         };
 
-        capslock_word: cplkwrd {
-            compatible = "zmk,behavior-capslock";
-            #binding-cells = <0>;
-            capslock-press-duration = <95>;
-            enable-on-press;
-            disable-on-next-release;
-            disable-on-keys = <SPACE TAB ENTER>;
-            display-name = "Capslock word";
-        };
+        /* capslock_word: cplkwrd { */
+        /*     compatible = "zmk,behavior-capslock"; */
+        /*     #binding-cells = <0>; */
+        /*     capslock-press-duration = <95>; */
+        /*     enable-on-press; */
+        /*     disable-on-next-release; */
+        /*     disable-on-keys = <SPACE TAB ENTER>; */
+        /*     display-name = "Capslock word"; */
+        /* }; */
 
-        caps_lshift: lmod_morph_hold_tap {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&ltsk OT LSHIFT>, <&capslock_word>;
-            mods = <MOD_RSFT>;
-        };
+        /* caps_lshift: lmod_morph_hold_tap { */
+        /*     compatible = "zmk,behavior-mod-morph"; */
+        /*     #binding-cells = <0>; */
+        /*     bindings = <&ltsk OT LSHIFT>, <&capslock_word>; */
+        /*     mods = <MOD_RSFT>; */
+        /* }; */
 
-        caps_rshift: rmod_morph_hold_tap {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&ltsk OT RSHIFT>, <&capslock_word>;
-            mods = <MOD_LSFT>;
-        };
+        /* caps_rshift: rmod_morph_hold_tap { */
+        /*     compatible = "zmk,behavior-mod-morph"; */
+        /*     #binding-cells = <0>; */
+        /*     bindings = <&ltsk OT RSHIFT>, <&capslock_word>; */
+        /*     mods = <MOD_LSFT>; */
+        /* }; */
 
         sm_reset: tap_dance_rst {
             compatible = "zmk,behavior-tap-dance";
@@ -158,7 +158,7 @@
 //├─────────────┼─────────────┼─────────────┼─────────────┼──────────────╯  ╰───────────────┼───────────────┼─────────────┼─────────────┼─────────────┤
     &kp SQT       &kp Q         &kp J         &kp K                                           &kp M           &kp W         &kp V         &kp L
 //╰───────────────────────────┼─────────────┼─────────────┼──────────────╮  ╭───────────────┼───────────────┼─────────────┼───────────────────────────╯
-                                &left_tab     &lt_spc SY 0  &caps_lshift      &caps_rshift    &lt_bspc SY 0   &up_del
+                                &left_tab     &lt_spc SY 0  &ltsk OT RSHIFT      &ltsk OT RSHIFT    &lt_bspc SY 0   &up_del
 //                            ╰─────────────┴─────────────┴──────────────╯  ╰───────────────┴───────────────┴─────────────╯
             >;
         };
