@@ -5,8 +5,6 @@ pcb/fp-info-cache
 pcb/_*
 pcb/~*
 modules
-zephyr
-!zephyr/module.yml
 zmk
 .west
 build

@@ -1,0 +1,4 @@
+name: zmk-keyboard-abyss
+build:
+  settings:
+    board_root: .

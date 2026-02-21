@@ -18,11 +18,18 @@
 #
 ---
 include:
-  - board: xiao_ble
-    shield: abyss_left
-  - board: xiao_ble
-    shield: abyss_right
-  - board: xiao_ble
-    shield: settings_reset
-  - board: xiao_ble
-    shield: tester_xiao
+    - board: seeeduino_xiao_ble
+      shield: abyss_left
+
+    # to suport zmk studio uncomment those
+    # - board: seeeduino_xiao_ble
+    #   shield: abyss_left
+    #   snippet: studio-rpc-usb-uart
+    #   cmake-args: -DCONFIG_ZMK_STUDIO=y
+    #   artifact-name: abyss_left_with_studio
+
+    - board: seeeduino_xiao_ble
+      shield: abyss_right
+
+    - board: seeeduino_xiao_ble
+      shield: settings_reset
