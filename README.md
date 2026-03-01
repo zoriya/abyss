@@ -15,7 +15,7 @@ A 32 key split keyboard with a low pinky column.
 |   2x  | 1.5u choc keycaps | i use [pom](https://splitkb.com/products/moergo-pom-mbk-profile-keycaps?variant=42898363121923) |
 |  32x  | [hotswap chock sockets](https://chosfox.com/products/kailh-choc-switch-1350-hot-swap-sockets?_pos=1&_sid=94423b5bb&_ss=r) | |
 |  32x  | diodes | |
-|  24x  | magnets | [20x8x1.5mm](https://www.amazon.fr/dp/B0DDCVJTG8?th=1) |
+|  16x  | magnets | [20x8x1.5mm](https://www.amazon.fr/dp/B0DDCVJTG8?th=1) |
 |   4x  | m2 screws | 4/6/8mm |
 |   4x  | m2 standoff | [<5mm wide, 6mm height](https://www.aliexpress.us/item/3256804230166399.html?spm=a2g0o.productlist.main.6.3a56Op21Op215V&algo_pvid=0788da77-fa40-49b3-9d72-f4cf68a2b90f&algo_exp_id=0788da77-fa40-49b3-9d72-f4cf68a2b90f-5&pdp_ext_f=%7B%22order%22%3A%22229%22%2C%22eval%22%3A%221%22%7D&pdp_npi=6%40dis%21USD%212.35%210.99%21%21%212.35%210.99%21%40211b655217567292930196247e11b4%2112000029108517137%21sea%21US%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A8c8b81cd%3Bm03_new_user%3A-29895%3BpisId%3A5000000174221208&curPageLogUid=uw39hgxJul2o&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005004416481151%7C_p_origin_prod%3A#nav-description)|
 
