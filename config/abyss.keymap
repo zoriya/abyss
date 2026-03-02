@@ -118,6 +118,7 @@
             compatible = "zmk,behavior-capslock";
             #binding-cells = <0>;
             capslock-press-duration = <95>;
+            capslock-press-keycode = <LS(CAPSLOCK)>;
             enable-on-press;
             disable-on-next-release;
             disable-on-keys = <SPACE TAB ENTER>;
